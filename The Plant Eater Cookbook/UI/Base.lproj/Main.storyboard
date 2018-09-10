@@ -68,6 +68,7 @@
                                         <connections>
                                             <outlet property="categorieImageView" destination="Css-L8-Xom" id="IdU-Y8-JNl"/>
                                             <outlet property="categorieLabel" destination="bqc-SU-Kpq" id="aAk-iH-Xqd"/>
+                                            <segue destination="Qni-Q1-9NY" kind="show" id="Iju-Fa-0zV"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -174,6 +175,10 @@
                         <viewLayoutGuide key="safeArea" id="z4m-Zg-P8t"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6Or-M4-VyG"/>
+                    <connections>
+                        <outlet property="recipeSearchBar" destination="sX0-sy-jwU" id="1Vz-rx-88y"/>
+                        <outlet property="recipesResultsTableView" destination="HN1-6p-6J4" id="D5R-ga-rei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6l-kk-3KS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QI7-vp-zFd" userLabel="Exit" sceneMemberID="exit"/>
@@ -293,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="454" y="-1156"/>
         </scene>
-        <!--View Controller-->
+        <!--Sub Categories Collection View Controller-->
         <scene sceneID="17f-NI-RDg">
             <objects>
-                <viewController id="oOc-0b-4zi" sceneMemberID="viewController">
+                <viewController id="oOc-0b-4zi" customClass="SubCategoriesCollectionViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CNB-kf-yOh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,6 +324,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="ce0-Pb-Ib8" kind="show" id="Sl6-7W-Gh6"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -332,22 +340,57 @@
             </objects>
             <point key="canvasLocation" x="2156" y="-224"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Result Recipes Table View Controller-->
         <scene sceneID="8BD-JU-jJW">
             <objects>
-                <tableViewController id="ce0-Pb-Ib8" sceneMemberID="viewController">
+                <tableViewController id="ce0-Pb-Ib8" customClass="ResultRecipesTableViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wxu-CC-GhV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dZ2-ZV-fpy">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="aeb-5y-s8d" customClass="RecipeTableViewCell" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dZ2-ZV-fpy" id="GMS-NG-3Ex">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aeb-5y-s8d" id="4nu-O1-jWp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nU0-1U-dis">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCP-Oy-y8j">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqv-Sb-gCJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="59.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-ya-gqM">
+                                                    <rect key="frame" x="60" y="0.0" width="315" height="59.5"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="nU0-1U-dis" secondAttribute="bottom" id="9rI-s6-Mcx"/>
+                                        <constraint firstAttribute="trailing" secondItem="kCP-Oy-y8j" secondAttribute="trailing" id="HR6-it-iTM"/>
+                                        <constraint firstAttribute="trailing" secondItem="nU0-1U-dis" secondAttribute="trailing" id="Od4-Gm-YRC"/>
+                                        <constraint firstAttribute="bottom" secondItem="kCP-Oy-y8j" secondAttribute="bottom" id="R3d-oD-2jf"/>
+                                        <constraint firstItem="nU0-1U-dis" firstAttribute="leading" secondItem="4nu-O1-jWp" secondAttribute="leading" id="e5D-sH-Hvo"/>
+                                        <constraint firstItem="kCP-Oy-y8j" firstAttribute="top" secondItem="4nu-O1-jWp" secondAttribute="top" id="f9Y-Pd-Hzv"/>
+                                        <constraint firstItem="nU0-1U-dis" firstAttribute="top" secondItem="4nu-O1-jWp" secondAttribute="top" id="gOd-cU-VsM"/>
+                                        <constraint firstItem="kCP-Oy-y8j" firstAttribute="leading" secondItem="4nu-O1-jWp" secondAttribute="leading" id="wNV-q8-CGf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mainContainerView" destination="nU0-1U-dis" id="BeJ-3a-9Ms"/>
+                                    <outlet property="recipeListImageView" destination="hqv-Sb-gCJ" id="Nms-HP-eWg"/>
+                                    <outlet property="recipeTitleLabel" destination="Sfj-ya-gqM" id="hDm-jW-H13"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -358,12 +401,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5Z-lm-Xf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017" y="-224"/>
+            <point key="canvasLocation" x="3016.8000000000002" y="-224.4377811094453"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Recipe Details View Controller-->
         <scene sceneID="MXl-gH-rfb">
             <objects>
-                <viewController id="KzN-1M-vTr" customClass="DetailsViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KzN-1M-vTr" customClass="RecipeDetailsViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eee-pH-Cdf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +419,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="3vf-aN-vlL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aVh-n0-3YE"/>
+                    <navigationItem key="navigationItem" id="aVh-n0-3YE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OiB-uI-zZl"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Di2-cL-Q4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

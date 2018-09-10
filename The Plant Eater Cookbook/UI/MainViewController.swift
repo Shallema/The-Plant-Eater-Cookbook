@@ -28,6 +28,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let starters = Category()
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.delegate = self
     }

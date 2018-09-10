@@ -1,5 +1,5 @@
 //
-//  AddTableViewController.swift
+//  ResultRecipesTableViewController.swift
 //  The Plant Eater Cookbook
 //
 //  Created by James Hallemans on 10/09/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTableViewController: UITableViewController {
+class ResultRecipesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
