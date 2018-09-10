@@ -9,23 +9,28 @@
 import Foundation
 
 class Category {
-    var id: Int = 0
-    var name: String = ""
-    var image: String = ""
-    var subcategories: [SubCategory] = []
+    var id: Int
+    var name: String
+    var image: String
+    var subcategories: [SubCategory]
     
-    init(){
-        
+    init(id: Int, name: String, image: String, subcategories: [SubCategory]) {
+        self.id = id
+        self.name = name
+        self.image = image
+        self.subcategories = subcategories
     }
 }
 
 
 class SubCategory {
-    var id: Int = 0
-    var name: String = ""
-    var image: String = ""
+    var id: Int
+    var name: String
+    var image: String
     
-    init(){
-        
+    init(id: Int, name: String, image: String) {
+        self.id = id
+        self.name = name
+        self.image = image
     }
 }

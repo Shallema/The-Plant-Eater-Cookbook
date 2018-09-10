@@ -66,7 +66,6 @@
 				033AE3072146924B004810BF /* RecipeDetailsViewController.swift */,
 				033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */,
 				033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */,
-				033AE31321469EF0004810BF /* RecipeTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -91,11 +90,19 @@
 		033AE2F82146759D004810BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */,
 				033AE30B214694FD004810BF /* Category.swift */,
 				033AE30D2146953B004810BF /* Recipe.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		033AE3152146AE70004810BF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */,
+				033AE31321469EF0004810BF /* RecipeTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D18E7DA0213ECCD200518159 = {
@@ -119,6 +126,7 @@
 			children = (
 				033AE2F6214674E2004810BF /* Application */,
 				033AE2F5214674A9004810BF /* UI */,
+				033AE3152146AE70004810BF /* Cells */,
 				033AE2F82146759D004810BF /* Utils */,
 				033AE2F72146757D004810BF /* Resources */,
 				D18E7DB8213ECCD200518159 /* Info.plist */,
