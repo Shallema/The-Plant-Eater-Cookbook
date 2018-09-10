@@ -26,28 +26,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         UIImage(named: "cat9")!
     ]
     
-    let categories: [Category] = [
-        Category(id: 1, name: "Starter", image: "", subcategories: []),
-        Category(id: 2, name: "Main", image: "", subcategories: []),
-        Category(id: 3, name: "Sweet", image: "", subcategories: []),
-        Category(id: 4, name: "Drink", image: "", subcategories: []),
-        Category(id: 5, name: "Snack", image: "", subcategories: []),
-        Category(id: 6, name: "All", image: "", subcategories: [])
-    ]
-    
-    let subCategories: [SubCategory] = [
-        SubCategory(id: 1, name: "JunkFood", image: ""),
-        SubCategory(id: 2, name: "Indian", image: ""),
-        SubCategory(id: 3, name: "Lebanese", image: ""),
-        SubCategory(id: 4, name: "Asian", image: ""),
-        SubCategory(id: 5, name: "Burger", image: ""),
-        SubCategory(id: 6, name: "Pasta", image: ""),
-        SubCategory(id: 7, name: "Biscuits", image: ""),
-        SubCategory(id: 8, name: "Pies", image: ""),
-        SubCategory(id: 9, name: "Salty", image: ""),
-        SubCategory(id: 10, name: "Sweet", image: ""),
-        SubCategory(id: 11, name: "All", image: "")
-    ]
+  
+    let categories = Category.fetchAllCategories()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +78,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+     
+        if let selected = self.categoriesCollectionView.indexPathsForSelectedItems?.first,
+            let destination = segue.destination as? SubCategoriesCollectionViewController
+            {
+                
+            destination.selectedCategory = self.categories [selected.item]
+        }
     }
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {

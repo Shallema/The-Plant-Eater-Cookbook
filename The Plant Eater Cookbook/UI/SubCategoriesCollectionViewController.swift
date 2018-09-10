@@ -8,10 +8,29 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "cellSubCat"
 
 class SubCategoriesCollectionViewController: UICollectionViewController {
-
+    
+    //MARK: - IBOutlets Properties
+    
+    @IBOutlet var subCategoriesCollectionView: UICollectionView!
+    
+    var selectedCategory: Category?{
+        didSet{
+            guard let selectedCategory = selectedCategory else {
+                return
+            }
+            self.loadViewIfNeeded()
+            print(selectedCategory.name)
+            let subcategories = SubCategory.getSubcategories(for: selectedCategory)
+            for sub in subcategories {
+                print(sub.name)
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,17 +48,16 @@ class SubCategoriesCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -60,7 +78,7 @@ class SubCategoriesCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // - MARK: UICollectionViewDelegate
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
