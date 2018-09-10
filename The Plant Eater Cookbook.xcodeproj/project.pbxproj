@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033AE2F421467429004810BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE2F321467429004810BF /* LoginViewController.swift */; };
+		033AE2FA2146765A004810BF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE2F92146765A004810BF /* DetailsViewController.swift */; };
+		033AE2FE214676EC004810BF /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE2FD214676EC004810BF /* AddTableViewController.swift */; };
+		033AE30021467928004810BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE2FF21467928004810BF /* SearchViewController.swift */; };
+		03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */; };
+		03F94FED21401C4400C6AC28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FEC21401C4400C6AC28 /* MainViewController.swift */; };
 		D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E7DAC213ECCD200518159 /* AppDelegate.swift */; };
-		D18E7DAF213ECCD200518159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E7DAE213ECCD200518159 /* ViewController.swift */; };
 		D18E7DB2213ECCD200518159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB0213ECCD200518159 /* Main.storyboard */; };
 		D18E7DB4213ECCD200518159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB3213ECCD200518159 /* Assets.xcassets */; };
 		D18E7DB7213ECCD200518159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB5213ECCD200518159 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033AE2F321467429004810BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		033AE2F92146765A004810BF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		033AE2FD214676EC004810BF /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		033AE2FF21467928004810BF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		03F94FEC21401C4400C6AC28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D18E7DA9213ECCD200518159 /* The Plant Eater Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Plant Eater Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E7DAC213ECCD200518159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D18E7DAE213ECCD200518159 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D18E7DB1213ECCD200518159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D18E7DB3213ECCD200518159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D18E7DB6213ECCD200518159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033AE2F5214674A9004810BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D18E7DB0213ECCD200518159 /* Main.storyboard */,
+				033AE2F321467429004810BF /* LoginViewController.swift */,
+				03F94FEC21401C4400C6AC28 /* MainViewController.swift */,
+				033AE2F92146765A004810BF /* DetailsViewController.swift */,
+				033AE2FD214676EC004810BF /* AddTableViewController.swift */,
+				033AE2FF21467928004810BF /* SearchViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		033AE2F6214674E2004810BF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D18E7DAC213ECCD200518159 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		033AE2F72146757D004810BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D18E7DB3213ECCD200518159 /* Assets.xcassets */,
+				D18E7DB5213ECCD200518159 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		033AE2F82146759D004810BF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D18E7DA0213ECCD200518159 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +102,10 @@
 		D18E7DAB213ECCD200518159 /* The Plant Eater Cookbook */ = {
 			isa = PBXGroup;
 			children = (
-				D18E7DAC213ECCD200518159 /* AppDelegate.swift */,
-				D18E7DAE213ECCD200518159 /* ViewController.swift */,
-				D18E7DB0213ECCD200518159 /* Main.storyboard */,
-				D18E7DB3213ECCD200518159 /* Assets.xcassets */,
-				D18E7DB5213ECCD200518159 /* LaunchScreen.storyboard */,
+				033AE2F6214674E2004810BF /* Application */,
+				033AE2F5214674A9004810BF /* UI */,
+				033AE2F82146759D004810BF /* Utils */,
+				033AE2F72146757D004810BF /* Resources */,
 				D18E7DB8213ECCD200518159 /* Info.plist */,
 			);
 			path = "The Plant Eater Cookbook";
@@ -136,8 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D18E7DAF213ECCD200518159 /* ViewController.swift in Sources */,
+				03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */,
+				033AE30021467928004810BF /* SearchViewController.swift in Sources */,
+				033AE2FE214676EC004810BF /* AddTableViewController.swift in Sources */,
 				D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */,
+				033AE2F421467429004810BF /* LoginViewController.swift in Sources */,
+				03F94FED21401C4400C6AC28 /* MainViewController.swift in Sources */,
+				033AE2FA2146765A004810BF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

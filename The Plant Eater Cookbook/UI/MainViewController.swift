@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  The Plant Eater Cookbook
 //
-//  Created by Sandrine ochou on 04/09/2018.
+//  Created by James Hallemans on 5/09/18.
 //  Copyright © 2018 SandrineH. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
@@ -25,18 +25,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         UIImage(named: "cat8")!,
         UIImage(named: "cat9")!
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
@@ -69,10 +69,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return CGSize(width: divideWidth, height: divideWidth)
     }
     
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print(indexPath.item)
-//    }
-    
-}
+    // MARK: - Navigation
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        if segue.identifier == "exitSearch" {
+            categoriesCollectionView.reloadData()
+        }
+    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        if segue.identifier == "exitAdd" {
+            categoriesCollectionView.reloadData()
+        }
+    }
+
+}
