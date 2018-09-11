@@ -16,6 +16,7 @@
 		033AE3102146981A004810BF /* SubCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */; };
 		033AE312214698A6004810BF /* ResultRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */; };
 		033AE31421469EF0004810BF /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE31321469EF0004810BF /* RecipeTableViewCell.swift */; };
+		033AE3192147A9E6004810BF /* SubCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE3182147A9E6004810BF /* SubCategoriesCollectionViewCell.swift */; };
 		03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */; };
 		03F94FED21401C4400C6AC28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FEC21401C4400C6AC28 /* MainViewController.swift */; };
 		D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E7DAC213ECCD200518159 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRecipesTableViewController.swift; sourceTree = "<group>"; };
 		033AE31321469EF0004810BF /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		033AE3182147A9E6004810BF /* SubCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F94FEC21401C4400C6AC28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D18E7DA9213ECCD200518159 /* The Plant Eater Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Plant Eater Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +57,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033AE2F5214674A9004810BF /* UI */ = {
+		033AE2F5214674A9004810BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D18E7DB0213ECCD200518159 /* Main.storyboard */,
@@ -67,7 +69,7 @@
 				033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */,
 				033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */,
 			);
-			path = UI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		033AE2F6214674E2004810BF /* Application */ = {
@@ -101,6 +103,7 @@
 			children = (
 				03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */,
 				033AE31321469EF0004810BF /* RecipeTableViewCell.swift */,
+				033AE3182147A9E6004810BF /* SubCategoriesCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -125,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				033AE2F6214674E2004810BF /* Application */,
-				033AE2F5214674A9004810BF /* UI */,
+				033AE2F5214674A9004810BF /* Views */,
 				033AE3152146AE70004810BF /* Cells */,
 				033AE2F82146759D004810BF /* Utils */,
 				033AE2F72146757D004810BF /* Resources */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033AE312214698A6004810BF /* ResultRecipesTableViewController.swift in Sources */,
+				033AE3192147A9E6004810BF /* SubCategoriesCollectionViewCell.swift in Sources */,
 				033AE30621468EFA004810BF /* LoginViewController.swift in Sources */,
 				033AE30C214694FD004810BF /* Category.swift in Sources */,
 				033AE31421469EF0004810BF /* RecipeTableViewCell.swift in Sources */,

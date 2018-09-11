@@ -10,14 +10,28 @@ import UIKit
 
 private let reuseIdentifier = "cellSubCat"
 
-class SubCategoriesCollectionViewController: UICollectionViewController {
+class SubCategoriesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     //MARK: - IBOutlets Properties
     
     @IBOutlet var subCategoriesCollectionView: UICollectionView!
     
-    var selectedCategory: Category?{
-        didSet{
+    //MARK: - Instance Properties
+    
+    let catImages: [UIImage] = [
+        UIImage(named: "cat1")!,
+        UIImage(named: "cat2")!,
+        UIImage(named: "cat3")!,
+        UIImage(named: "cat4")!,
+        UIImage(named: "cat5")!,
+        UIImage(named: "cat6")!,
+        UIImage(named: "cat7")!,
+        UIImage(named: "cat8")!,
+        UIImage(named: "cat9")!
+    ]
+    
+    var selectedCategory: Category? {
+        didSet {
             guard let selectedCategory = selectedCategory else {
                 return
             }
@@ -30,15 +44,16 @@ class SubCategoriesCollectionViewController: UICollectionViewController {
         }
     }
     
+    var subcategories: [SubCategory] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        subcategories = SubCategory.getSubcategories(for: selectedCategory!)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -59,23 +74,36 @@ class SubCategoriesCollectionViewController: UICollectionViewController {
 
     // MARK: - UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+
+        return subcategories.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        let subcategory = subcategories[indexPath.item]
+        let cell = subCategoriesCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SubCategoriesCollectionViewCell
+        cell.subCatImageView.image = catImages[indexPath.item]
+        cell.subCatLabel.text = subcategory.name
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        self.subCategoriesCollectionView.layoutIfNeeded()
+        let collectionViewWidth = self.subCategoriesCollectionView.bounds.width
+        let divideWidth = (collectionViewWidth / 3.0) - 1.0
+        return CGSize(width: divideWidth, height: divideWidth)
     }
 
     // - MARK: UICollectionViewDelegate
@@ -87,12 +115,12 @@ class SubCategoriesCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

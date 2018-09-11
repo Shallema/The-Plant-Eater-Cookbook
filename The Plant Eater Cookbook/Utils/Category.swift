@@ -37,17 +37,13 @@ class Category: Equatable {
 
 }
 
-class SubCategory {
-    var id: Int
-    var name: String
-    var image: String
+class SubCategory: Category {
+
     var category:  Category
     
     init(id: Int, name: String, image: String, category: Category) {
-        self.id = id
-        self.name = name
-        self.image = image
         self.category = category
+        super.init(id: id, name: name, image: image)
     }
     
     private static var allSubcategories: [SubCategory]{
@@ -74,9 +70,9 @@ class SubCategory {
     
     static func getSubcategories(for category: Category) -> [SubCategory]{
         var subcategories = [SubCategory]()
-        for subategory in SubCategory.allSubcategories{
-            if subategory.category == category {
-                subcategories.append(subategory)
+        for subcategory in SubCategory.allSubcategories{
+            if subcategory.category == category {
+                subcategories.append(subcategory)
             }
         }
         return subcategories
