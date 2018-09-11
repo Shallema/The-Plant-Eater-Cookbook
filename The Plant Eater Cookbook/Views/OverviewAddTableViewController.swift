@@ -1,28 +1,41 @@
 //
-//  AddTableViewController.swift
+//  OverviewAddTableViewController.swift
 //  The Plant Eater Cookbook
 //
-//  Created by James Hallemans on 10/09/18.
+//  Created by James Hallemans on 11/09/18.
 //  Copyright © 2018 SandrineH. All rights reserved.
 //
 
 import UIKit
 
-class AddTableViewController: UITableViewController {
+class OverviewAddTableViewController: UITableViewController, AddCategoryChoiceTableViewControllerDelegate {
 
+    @IBOutlet weak var selectedCategoryDetailLabel: UILabel!
+    
+    var selectedCategory: Category?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        updateCategory()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateCategory() {
+        if let selectedCategory = selectedCategory {
+            selectedCategoryDetailLabel.text = selectedCategory.name
+        } else {
+            selectedCategoryDetailLabel.text = "Not Set"
+        }
+    }
+    
+    func didSelect(selectedCategory: Category) {
+        self.selectedCategory = selectedCategory
+        updateCategory()
     }
 
     // MARK: - Table view data source
@@ -82,14 +95,16 @@ class AddTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "SelectCategory" {
+            let destinationViewController = segue.destination as? AddCategoryChoiceTableViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.selectedCat = selectedCategory
+        }
     }
-    */
+
 
 }
