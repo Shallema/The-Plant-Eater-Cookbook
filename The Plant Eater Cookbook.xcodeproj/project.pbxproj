@@ -94,8 +94,8 @@
 				033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */,
 				033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */,
 				03E5628A2147F2C6001D21FD /* AddRecipeViewController.swift */,
-				03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */,
 				03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */,
+				03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol AddCategoryChoiceTableViewControllerDelegate {
+    
     func didSelect(selectedCategory: Category)
 }
 
@@ -21,6 +22,8 @@ class AddCategoryChoiceTableViewController: UITableViewController {
     var delegate: AddCategoryChoiceTableViewControllerDelegate?
     
     //MARK: - ViewController Life Cycle
+    var categories: [Category] = []
+    var subcategories: [Int: [SubCategory]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,12 @@ class AddCategoryChoiceTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        categories = Category.fetchAllCategories()
+        for category in categories{
+            let subs = SubCategory.getSubcategories(for: category)
+            self.subcategories[category.id] = subs
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,29 +49,35 @@ class AddCategoryChoiceTableViewController: UITableViewController {
     // MARK: - TableView Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return self.categories.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return Category.fetchAllCategories().count
+        let category = self.categories[section]
+        return subcategories[category.id]?.count ?? 0
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryChoiceCell", for: indexPath) as! ChoiceCategoryTableViewCell
-        let categ = Category.fetchAllCategories()[indexPath.row]
+        let category = self.categories[indexPath.section]
+        let subcategory = self.subcategories[category.id]![indexPath.row]
         
-        cell.choiceCatLabel?.text = categ.name
         
-        if selectedCat == self.selectedCat {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        cell.choiceCatLabel?.text = subcategory.name
+        
+//        if self.selectedCat == self.selectedCat {
+//            cell.accessoryType = .checkmark
+//        } else {
+//            cell.accessoryType = .none
+//        }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let category = self.categories[section]
+        return category.name
     }
     
     //MARK: - TableView Delegate
