@@ -21,8 +21,6 @@
 		03E562942147F4EB001D21FD /* IngredientsAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E562922147F4EB001D21FD /* IngredientsAddViewController.xib */; };
 		03E562972147F502001D21FD /* DirectionsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562952147F502001D21FD /* DirectionsAddViewController.swift */; };
 		03E562982147F502001D21FD /* DirectionsAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E562962147F502001D21FD /* DirectionsAddViewController.xib */; };
-		03E5629B2147F512001D21FD /* ImageAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562992147F512001D21FD /* ImageAddViewController.swift */; };
-		03E5629C2147F512001D21FD /* ImageAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E5629A2147F512001D21FD /* ImageAddViewController.xib */; };
 		03E562A32147F6B9001D21FD /* OverviewAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562A12147F6B9001D21FD /* OverviewAddViewController.swift */; };
 		03E562A42147F6B9001D21FD /* OverviewAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E562A22147F6B9001D21FD /* OverviewAddViewController.xib */; };
 		03E562A72147FC29001D21FD /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562A52147FC29001D21FD /* TestTableViewController.swift */; };
@@ -32,6 +30,7 @@
 		03E562B021486915001D21FD /* OverviewAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */; };
 		03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */; };
 		03F94FED21401C4400C6AC28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FEC21401C4400C6AC28 /* MainViewController.swift */; };
+		03FD503E21494BEE0073BC85 /* ImageAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */; };
 		D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E7DAC213ECCD200518159 /* AppDelegate.swift */; };
 		D18E7DB2213ECCD200518159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB0213ECCD200518159 /* Main.storyboard */; };
 		D18E7DB4213ECCD200518159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB3213ECCD200518159 /* Assets.xcassets */; };
@@ -53,8 +52,6 @@
 		03E562922147F4EB001D21FD /* IngredientsAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsAddViewController.xib; sourceTree = "<group>"; };
 		03E562952147F502001D21FD /* DirectionsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsAddViewController.swift; sourceTree = "<group>"; };
 		03E562962147F502001D21FD /* DirectionsAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectionsAddViewController.xib; sourceTree = "<group>"; };
-		03E562992147F512001D21FD /* ImageAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAddViewController.swift; sourceTree = "<group>"; };
-		03E5629A2147F512001D21FD /* ImageAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageAddViewController.xib; sourceTree = "<group>"; };
 		03E562A12147F6B9001D21FD /* OverviewAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAddViewController.swift; sourceTree = "<group>"; };
 		03E562A22147F6B9001D21FD /* OverviewAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewAddViewController.xib; sourceTree = "<group>"; };
 		03E562A52147FC29001D21FD /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +61,7 @@
 		03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAddTableViewController.swift; sourceTree = "<group>"; };
 		03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F94FEC21401C4400C6AC28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAddViewController.swift; sourceTree = "<group>"; };
 		D18E7DA9213ECCD200518159 /* The Plant Eater Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Plant Eater Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E7DAC213ECCD200518159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E7DB1213ECCD200518159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +94,7 @@
 				03E5628A2147F2C6001D21FD /* AddRecipeViewController.swift */,
 				03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */,
 				03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */,
+				03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,8 +145,6 @@
 				03E562922147F4EB001D21FD /* IngredientsAddViewController.xib */,
 				03E562952147F502001D21FD /* DirectionsAddViewController.swift */,
 				03E562962147F502001D21FD /* DirectionsAddViewController.xib */,
-				03E562992147F512001D21FD /* ImageAddViewController.swift */,
-				03E5629A2147F512001D21FD /* ImageAddViewController.xib */,
 				03E562A52147FC29001D21FD /* TestTableViewController.swift */,
 				03E562A62147FC29001D21FD /* TestTableViewController.xib */,
 			);
@@ -245,7 +242,6 @@
 			files = (
 				03E562942147F4EB001D21FD /* IngredientsAddViewController.xib in Resources */,
 				03E562A42147F6B9001D21FD /* OverviewAddViewController.xib in Resources */,
-				03E5629C2147F512001D21FD /* ImageAddViewController.xib in Resources */,
 				03E562A82147FC29001D21FD /* TestTableViewController.xib in Resources */,
 				D18E7DB7213ECCD200518159 /* LaunchScreen.storyboard in Resources */,
 				03E562982147F502001D21FD /* DirectionsAddViewController.xib in Resources */,
@@ -274,7 +270,7 @@
 				03E562972147F502001D21FD /* DirectionsAddViewController.swift in Sources */,
 				03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */,
 				033AE3082146924B004810BF /* RecipeDetailsViewController.swift in Sources */,
-				03E5629B2147F512001D21FD /* ImageAddViewController.swift in Sources */,
+				03FD503E21494BEE0073BC85 /* ImageAddViewController.swift in Sources */,
 				03E5628B2147F2C6001D21FD /* AddRecipeViewController.swift in Sources */,
 				03E562932147F4EB001D21FD /* IngredientsAddViewController.swift in Sources */,
 				D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */,

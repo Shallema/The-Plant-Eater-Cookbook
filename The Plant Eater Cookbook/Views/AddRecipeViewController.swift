@@ -86,5 +86,4 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
             pageViewController.setViewControllers([orderedViewControllers[newIndex]], direction: currentIndex < newIndex ? .forward: .reverse, animated: true, completion: nil)
         }
     }
-    
 }
