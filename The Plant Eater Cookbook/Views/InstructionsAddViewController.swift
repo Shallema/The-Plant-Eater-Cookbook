@@ -8,7 +8,11 @@
 
 import UIKit
 
-class InstructionsAddViewController: UIViewController {
+class InstructionsAddViewController: UIViewController, UITextViewDelegate {
+    
+    //MARK: - IBOutlet Properties
+    
+    @IBOutlet weak var instructionsTextView: UITextView!
     
     //MARK: - Instance Properties
     
@@ -16,19 +20,44 @@ class InstructionsAddViewController: UIViewController {
         var instruction: String?
     }
     
-    var instructionContent: InstructionsContent = InstructionsContent()
+    var instructionContent: InstructionsContent? {
+        let instructions = instructionsTextView.text ?? ""
+        
+        return InstructionsContent(instruction: instructions)
+    }
     
     //MARK: - ViewController Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        instructionsTextView.delegate = self
+        
+        instructionsTextView.text = "Add instructions..."
+        instructionsTextView.textColor = UIColor.lightGray
+        textViewDidBeginEditing(instructionsTextView)
+        textViewDidEndEditing(instructionsTextView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Functions
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if instructionsTextView.textColor == UIColor.lightGray {
+            instructionsTextView.text = nil
+            instructionsTextView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if instructionsTextView.text.isEmpty {
+            instructionsTextView.text = "Add ingredients..."
+            instructionsTextView.textColor = UIColor.lightGray
+        }
     }
     
 

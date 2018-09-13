@@ -507,7 +507,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XTC-NY-FOz">
                                             <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -547,17 +547,13 @@
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWH-ad-ce1">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="GqB-QM-KdX"/>
                     </view>
+                    <connections>
+                        <outlet property="ingredientsTextView" destination="vGS-Fq-aeE" id="a3R-rt-LAt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDl-lW-k91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -578,17 +574,13 @@
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add directions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dfh-oW-Ra6">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="soi-Kq-dfD"/>
                     </view>
+                    <connections>
+                        <outlet property="instructionsTextView" destination="sxX-LJ-oPn" id="EWz-Sh-fsb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZq-P9-wOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -602,13 +594,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cag-X8-vFf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cag-X8-vFf">
                                 <rect key="frame" x="16" y="36" width="343" height="327"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GU-aZ-Msc">
-                                <rect key="frame" x="16" y="184" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GU-aZ-Msc">
+                                <rect key="frame" x="16" y="371" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BRP-Ey-qrG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Add Picture"/>
@@ -618,6 +611,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cag-X8-vFf" firstAttribute="trailing" secondItem="6GU-aZ-Msc" secondAttribute="trailing" id="4Nb-vd-T78"/>
+                            <constraint firstItem="cag-X8-vFf" firstAttribute="top" secondItem="fbl-Gn-vEF" secondAttribute="top" constant="16" id="GdA-v3-8Gs"/>
+                            <constraint firstItem="cag-X8-vFf" firstAttribute="leading" secondItem="bZL-Q1-wN5" secondAttribute="leadingMargin" id="Jkb-lH-A7r"/>
+                            <constraint firstItem="fbl-Gn-vEF" firstAttribute="bottom" secondItem="6GU-aZ-Msc" secondAttribute="bottom" constant="266" id="O5U-bI-Ira"/>
+                            <constraint firstItem="cag-X8-vFf" firstAttribute="trailing" secondItem="bZL-Q1-wN5" secondAttribute="trailingMargin" id="cim-9c-F7O"/>
+                            <constraint firstItem="6GU-aZ-Msc" firstAttribute="top" secondItem="cag-X8-vFf" secondAttribute="bottom" constant="8" symbolic="YES" id="sK7-gL-bbH"/>
+                            <constraint firstItem="cag-X8-vFf" firstAttribute="leading" secondItem="6GU-aZ-Msc" secondAttribute="leading" id="shy-qb-fTh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fbl-Gn-vEF"/>
                     </view>
                     <connections>

@@ -8,7 +8,12 @@
 
 import UIKit
 
-class IngredientsAddViewController: UIViewController {
+class IngredientsAddViewController: UIViewController, UITextViewDelegate {
+    
+    //MARK: - IBOutlets Properties
+    
+    @IBOutlet weak var ingredientsTextView: UITextView!
+    
     
     //MARK: - Instance Properties
     
@@ -16,19 +21,44 @@ class IngredientsAddViewController: UIViewController {
         var ingredient: String?
     }
     
-    var ingredientContent: IngredientContent = IngredientContent()
+    var ingredientContent: IngredientContent? {
+        let ingredient = ingredientsTextView.text ?? ""
+        
+        return IngredientContent(ingredient: ingredient)
+    }
     
     //MARK: - ViewController Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        ingredientsTextView.delegate = self
+        
+        ingredientsTextView.text = "Add ingredients..."
+        ingredientsTextView.textColor = UIColor.lightGray
+        textViewDidBeginEditing(ingredientsTextView)
+        textViewDidEndEditing(ingredientsTextView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Functions
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if ingredientsTextView.textColor == UIColor.lightGray {
+            ingredientsTextView.text = nil
+            ingredientsTextView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if ingredientsTextView.text.isEmpty {
+            ingredientsTextView.text = "Add ingredients..."
+            ingredientsTextView.textColor = UIColor.lightGray
+        }
     }
     
 

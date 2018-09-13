@@ -18,10 +18,16 @@ class ImageAddViewController: UIViewController, UIImagePickerControllerDelegate,
     //MARK: - Instance Propeties
     
     struct ImageContent {
-        var image: String?
+        var image: UIImageView?
     }
     
-    var imageContent: ImageContent = ImageContent()
+    //var imageContent: ImageContent = ImageContent()
+    
+    var imageContent: ImageContent? {
+        let image = addImageView
+
+        return ImageContent(image: image)
+    }
     
     //MARK: - ViewController Life Cycle
     

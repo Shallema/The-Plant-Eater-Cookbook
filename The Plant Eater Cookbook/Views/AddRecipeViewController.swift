@@ -102,11 +102,11 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
             case let vc as OverviewAddTableViewController:
                 print(vc.overviewContent!)
             case let vc as IngredientsAddViewController:
-                print(vc.ingredientContent)
+                print(vc.ingredientContent!)
             case let vc as InstructionsAddViewController:
-                print(vc.instructionContent)
+                print(vc.instructionContent!)
             case let vc as ImageAddViewController:
-                print(vc.imageContent)
+                print(vc.imageContent!)
             default:
                 break
             }
