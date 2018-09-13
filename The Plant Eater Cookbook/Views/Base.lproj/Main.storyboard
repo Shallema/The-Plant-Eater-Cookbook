@@ -216,14 +216,24 @@
                         <viewLayoutGuide key="safeArea" id="XPY-hg-tAL"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Recipe" id="ipb-9H-rA1">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="gAt-Vx-5D9"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="REU-NF-NGU"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="gAt-Vx-5D9">
+                            <connections>
+                                <segue destination="5wI-6p-gFe" kind="unwind" identifier="cancelUnwind" unwindAction="unwindAddRecipeWithSegue:" id="7g2-H2-5Er"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="REU-NF-NGU">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="6JR-d7-AEH" id="gc8-p8-Eav"/>
+                                <segue destination="5wI-6p-gFe" kind="unwind" identifier="saveUnwind" unwindAction="unwindAddRecipeWithSegue:" id="ThG-zi-Wlq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addSegmentedControl" destination="8a3-RE-Eec" id="XaV-vd-65G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmy-kI-rch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5wI-6p-gFe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="772" y="1351.5742128935533"/>
         </scene>
@@ -255,21 +265,20 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="dTm-8u-4mR">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dTm-8u-4mR">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dTm-8u-4mR" id="WwF-f4-lXN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Brief description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YCc-c5-66i">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="99"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Brief description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-tq-o9S">
+                                                    <rect key="frame" x="16" y="6" width="343" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="textColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -278,7 +287,7 @@
                             <tableViewSection id="Cyk-y1-ab5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="JCg-ZO-NBD" detailTextLabel="1GJ-vN-jOX" style="IBUITableViewCellStyleValue1" id="9e2-LT-qJo" customClass="AddCategoryTableViewCell" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="225" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9e2-LT-qJo" id="GDk-pF-yWV">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -305,7 +314,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pbu-0V-TaM">
-                                        <rect key="frame" x="0.0" y="269" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="203" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pbu-0V-TaM" id="cfs-mT-qH9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -326,7 +335,7 @@
                             <tableViewSection id="Ci0-wn-4Ty">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="slV-Fx-4Wt">
-                                        <rect key="frame" x="0.0" y="349" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="283" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="slV-Fx-4Wt" id="BCb-Jy-t4b">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -357,7 +366,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iRS-ak-X4J" detailTextLabel="ZFc-vD-djy" style="IBUITableViewCellStyleValue1" id="kiS-wW-WkX">
-                                        <rect key="frame" x="0.0" y="393" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="327" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kiS-wW-WkX" id="uWp-Ky-5Mc">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -381,7 +390,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="4fW-Xy-ECO">
-                                        <rect key="frame" x="0.0" y="437" width="375" height="162"/>
+                                        <rect key="frame" x="0.0" y="371" width="375" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4fW-Xy-ECO" id="fwa-dj-eOs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
@@ -406,7 +415,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="K83-gc-zVe" detailTextLabel="qbx-kj-4QQ" style="IBUITableViewCellStyleValue1" id="aAa-uu-gOO">
-                                        <rect key="frame" x="0.0" y="599" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="533" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAa-uu-gOO" id="FY3-dF-EQf">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -430,7 +439,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="DLe-Xk-ZlG">
-                                        <rect key="frame" x="0.0" y="643" width="375" height="162"/>
+                                        <rect key="frame" x="0.0" y="577" width="375" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DLe-Xk-ZlG" id="9fc-kr-9Vo">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
@@ -465,17 +474,19 @@
                     <connections>
                         <outlet property="cookTimeDatePicker" destination="ZWI-yz-Hwk" id="0tX-Qd-n0R"/>
                         <outlet property="cookTimeLabel" destination="qbx-kj-4QQ" id="ZMH-Zl-AE2"/>
+                        <outlet property="descrTextField" destination="ThK-tq-o9S" id="cnV-f2-WW5"/>
                         <outlet property="nbServeLabel" destination="hn2-zv-fYQ" id="WZK-P1-iHC"/>
                         <outlet property="nbServeStepper" destination="bNo-oP-Agf" id="kkU-be-vSf"/>
                         <outlet property="prepTimeDatePicker" destination="n6Z-c1-bO7" id="ThE-aL-lPq"/>
                         <outlet property="prepTimeLabel" destination="ZFc-vD-djy" id="DRO-K9-OBo"/>
                         <outlet property="selectedCategoryDetailLabel" destination="1GJ-vN-jOX" id="Kyr-XU-TI9"/>
+                        <outlet property="sourceTextField" destination="274-hK-oxm" id="F4u-AJ-ZjK"/>
                         <outlet property="titleTextField" destination="BcY-pv-KlE" id="XcU-bg-uI0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWr-bG-byZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-202.40000000000001" y="2022.6386806596704"/>
+            <point key="canvasLocation" x="152.80000000000001" y="2022.6386806596704"/>
         </scene>
         <!--Add Category Choice Table View Controller-->
         <scene sceneID="RSY-li-4D5">
@@ -512,15 +523,19 @@
                             <outlet property="delegate" destination="ubQ-dw-TDG" id="Trf-Fx-6tg"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Txh-OU-PUQ" kind="unwind" identifier="unwindFromCategories" unwindAction="unwindFromSubCategorySelectionWithUnwindSegue:" id="ceZ-fp-oZC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjB-gd-LUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Txh-OU-PUQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-202" y="2757"/>
+            <point key="canvasLocation" x="153" y="2779"/>
         </scene>
-        <!--View Controller-->
+        <!--Ingredients Add View Controller-->
         <scene sceneID="BZf-b7-hY0">
             <objects>
-                <viewController storyboardIdentifier="ingredientsAdd" id="ISj-Wn-QbJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ingredientsAdd" id="ISj-Wn-QbJ" customClass="IngredientsAddViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jkd-7n-CcK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,12 +561,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDl-lW-k91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429.60000000000002" y="2022.6386806596704"/>
+            <point key="canvasLocation" x="825" y="2023"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions Add View Controller-->
         <scene sceneID="nNX-Tw-vJT">
             <objects>
-                <viewController storyboardIdentifier="directionsAdd" id="5bR-Jd-lCc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="directionsAdd" id="5bR-Jd-lCc" customClass="InstructionsAddViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jKS-6H-Nhf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -577,7 +592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZq-P9-wOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="2022.6386806596704"/>
+            <point key="canvasLocation" x="1490" y="2023"/>
         </scene>
         <!--Image Add View Controller-->
         <scene sceneID="kbl-KS-e37">
@@ -611,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pxl-cO-zSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="2022.6386806596704"/>
+            <point key="canvasLocation" x="2158" y="2023"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="CaQ-QG-xen">
@@ -619,7 +634,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="LVc-Tw-HjW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXN-PR-ynt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="1352"/>
+            <point key="canvasLocation" x="1518" y="1352"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="iIA-PZ-NYb">

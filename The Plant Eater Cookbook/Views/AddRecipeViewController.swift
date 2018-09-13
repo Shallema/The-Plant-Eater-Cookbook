@@ -20,10 +20,14 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let overviewVC = storyboard.instantiateViewController(withIdentifier: "overviewAdd")
-        let ingredientsVC = storyboard.instantiateViewController(withIdentifier: "ingredientsAdd")
-        let descriptionsVC = storyboard.instantiateViewController(withIdentifier: "directionsAdd")
-        let imageVC = storyboard.instantiateViewController(withIdentifier: "imageAdd")
+        
+        let overviewVC = storyboard.instantiateViewController(withIdentifier: "overviewAdd") as! OverviewAddTableViewController
+        
+        let ingredientsVC = storyboard.instantiateViewController(withIdentifier: "ingredientsAdd") as! IngredientsAddViewController
+        
+        let descriptionsVC = storyboard.instantiateViewController(withIdentifier: "directionsAdd") as! InstructionsAddViewController
+        
+        let imageVC = storyboard.instantiateViewController(withIdentifier: "imageAdd") as! ImageAddViewController
         
         return [overviewVC, ingredientsVC, descriptionsVC, imageVC]
     }()
@@ -48,6 +52,10 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embededPaging" {
             pageViewController = segue.destination as! UIPageViewController
+        }
+        
+        if segue.identifier == "saveUnwind" {
+            saveButtonPressed(sender as! UIBarButtonItem)
         }
     }
     
@@ -84,6 +92,24 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
         if let vc = pageViewController.viewControllers?.first {
             let currentIndex = orderedViewControllers.index(of: vc)!
             pageViewController.setViewControllers([orderedViewControllers[newIndex]], direction: currentIndex < newIndex ? .forward: .reverse, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        for vc in orderedViewControllers{
+            switch vc{
+            case let vc as OverviewAddTableViewController:
+                print(vc.overviewContent!)
+            case let vc as IngredientsAddViewController:
+                print(vc.ingredientContent)
+            case let vc as InstructionsAddViewController:
+                print(vc.instructionContent)
+            case let vc as ImageAddViewController:
+                print(vc.imageContent)
+            default:
+                break
+            }
         }
     }
 }

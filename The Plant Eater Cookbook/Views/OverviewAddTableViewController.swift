@@ -8,13 +8,17 @@
 
 import UIKit
 
-class OverviewAddTableViewController: UITableViewController, AddCategoryChoiceTableViewControllerDelegate {
+
+class OverviewAddTableViewController: UITableViewController {
 
     //MARK: - IBOutlets Properties
     
     @IBOutlet weak var titleTextField: UITextField!
-
+    @IBOutlet weak var descrTextField: UITextField!
+    
     @IBOutlet weak var selectedCategoryDetailLabel: UILabel!
+    
+    @IBOutlet weak var sourceTextField: UITextField!
     
     @IBOutlet weak var nbServeLabel: UILabel!
     @IBOutlet weak var nbServeStepper: UIStepper!
@@ -26,7 +30,35 @@ class OverviewAddTableViewController: UITableViewController, AddCategoryChoiceTa
     
     //MARK: - Instance Properties
     
-    var selectedCategory: Category?
+    struct OverviewContent {
+        var title: String = ""
+        var descr: String?
+        var category: Category?
+        var source: String?
+        var serve: Int?
+        var prepTime: TimeInterval?
+        var cookTime: TimeInterval?
+
+    }
+    
+    var overviewContent: OverviewContent? {
+        let title = titleTextField.text ?? ""
+        let descr = descrTextField.text ?? ""
+        let source = sourceTextField.text ?? ""
+        let nbrServe = Int(nbServeStepper.value)
+        let prepTime = prepTimeDatePicker.countDownDuration
+        let cookTime = cookTimeDatePicker.countDownDuration
+        
+        return OverviewContent(title: title, descr: descr, category: selectedCategory, source: source, serve: nbrServe, prepTime: prepTime, cookTime: cookTime)
+    }
+    
+
+    var selectedCategory: SubCategory?{
+        didSet{
+            guard let selectedCategory =  selectedCategory else{return}
+            selectedCategoryDetailLabel.text = selectedCategory.category.name + " > "  + selectedCategory.name
+        }
+    }
     
     let prepTimeDatePickerCellIndexPath = IndexPath(row: 2, section: 2)
     let cookTimeDatePickerCellIndexPath = IndexPath(row: 4, section: 2)
@@ -54,6 +86,7 @@ class OverviewAddTableViewController: UITableViewController, AddCategoryChoiceTa
         updateCategory()
         updateDateViews()
         updateNumberOfServe()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,14 +101,14 @@ class OverviewAddTableViewController: UITableViewController, AddCategoryChoiceTa
             selectedCategoryDetailLabel.text = selectedCategory.name
             
         } else {
-            selectedCategoryDetailLabel.text = "Not Set"
+            selectedCategoryDetailLabel.text = "..."
         }
     }
     
-    func didSelect(selectedCategory: Category) {
-        self.selectedCategory = selectedCategory
-        updateCategory()
-    }
+//    func didSelect(selectedCategory: Category) {
+//        self.selectedCategory = selectedCategory
+//        updateCategory()
+//    }
     
     func updateDateViews() {
         let formatter = DateComponentsFormatter()
@@ -158,68 +191,18 @@ class OverviewAddTableViewController: UITableViewController, AddCategoryChoiceTa
     
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-
     // MARK: - Navigation
+    
+    @IBAction func unwindFromSubCategorySelection(unwindSegue: UIStoryboardSegue){
+        if let categorySelectionVC = unwindSegue.source as? AddCategoryChoiceTableViewController{
+            self.selectedCategory = categorySelectionVC.selectedCat
+            print(self.selectedCategory!)
+        }
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SelectCategory" {
             let destinationViewController = segue.destination as? AddCategoryChoiceTableViewController
-            destinationViewController?.delegate = self
             destinationViewController?.selectedCat = selectedCategory
         }
     }

@@ -17,7 +17,7 @@ class AddCategoryChoiceTableViewController: UITableViewController {
 
     //MARK: - Instance Properties
     
-    var selectedCat: Category?
+    var selectedCat: SubCategory?
     
     var delegate: AddCategoryChoiceTableViewControllerDelegate?
     
@@ -66,11 +66,11 @@ class AddCategoryChoiceTableViewController: UITableViewController {
         
         cell.choiceCatLabel?.text = subcategory.name
         
-//        if self.selectedCat == self.selectedCat {
-//            cell.accessoryType = .checkmark
-//        } else {
-//            cell.accessoryType = .none
-//        }
+        if self.selectedCat == subcategory {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         
         return cell
     }
@@ -84,9 +84,10 @@ class AddCategoryChoiceTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedCat = Category.fetchAllCategories()[indexPath.row]
-        delegate?.didSelect(selectedCategory: selectedCat!)
-        tableView.reloadData()
+        let category = self.categories[indexPath.section]
+        let subcategory = self.subcategories[category.id]![indexPath.row]
+        selectedCat = subcategory
+        self.performSegue(withIdentifier: "unwindFromCategories", sender: nil)
     }
     
     /*

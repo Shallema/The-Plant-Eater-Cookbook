@@ -15,6 +15,14 @@ class ImageAddViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var addImageView: UIImageView!
     
     
+    //MARK: - Instance Propeties
+    
+    struct ImageContent {
+        var image: String?
+    }
+    
+    var imageContent: ImageContent = ImageContent()
+    
     //MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {

@@ -117,4 +117,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             categoriesCollectionView.reloadData()
         }
     }
+    
+    @IBAction func unwindAddRecipe(segue: UIStoryboardSegue) {
+        if segue.identifier == "cancelAdd" {
+            categoriesCollectionView.reloadData()
+        }
+    }
 }
