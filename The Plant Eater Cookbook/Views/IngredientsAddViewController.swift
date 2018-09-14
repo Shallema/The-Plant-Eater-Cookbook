@@ -23,7 +23,6 @@ class IngredientsAddViewController: UIViewController, UITextViewDelegate {
     
     var ingredientContent: IngredientContent? {
         let ingredient = ingredientsTextView.text ?? ""
-        
         return IngredientContent(ingredient: ingredient)
     }
     

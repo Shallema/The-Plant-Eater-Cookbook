@@ -51,11 +51,10 @@ class OverviewAddTableViewController: UITableViewController {
         
         return OverviewContent(title: title, descr: descr, category: selectedCategory, source: source, serve: nbrServe, prepTime: prepTime, cookTime: cookTime)
     }
-    
 
-    var selectedCategory: SubCategory?{
-        didSet{
-            guard let selectedCategory =  selectedCategory else{return}
+    var selectedCategory: SubCategory? {
+        didSet {
+            guard let selectedCategory =  selectedCategory else { return }
             selectedCategoryDetailLabel.text = selectedCategory.category.name + " > "  + selectedCategory.name
         }
     }
@@ -194,7 +193,7 @@ class OverviewAddTableViewController: UITableViewController {
     // MARK: - Navigation
     
     @IBAction func unwindFromSubCategorySelection(unwindSegue: UIStoryboardSegue){
-        if let categorySelectionVC = unwindSegue.source as? AddCategoryChoiceTableViewController{
+        if let categorySelectionVC = unwindSegue.source as? AddCategoryChoiceTableViewController {
             self.selectedCategory = categorySelectionVC.selectedCat
             print(self.selectedCategory!)
         }

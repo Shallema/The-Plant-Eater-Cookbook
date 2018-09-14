@@ -25,6 +25,9 @@
 		03FD503E21494BEE0073BC85 /* ImageAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */; };
 		03FD5040214A57650073BC85 /* IngredientsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */; };
 		03FD5042214A57E70073BC85 /* InstructionsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */; };
+		03FD5044214C16520073BC85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FD5043214C16520073BC85 /* GoogleService-Info.plist */; };
+		03FD5046214C17180073BC85 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD5045214C17180073BC85 /* LoginMainViewController.swift */; };
+		03FD5048214C173E0073BC85 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD5047214C173E0073BC85 /* SignUpViewController.swift */; };
 		D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E7DAC213ECCD200518159 /* AppDelegate.swift */; };
 		D18E7DB2213ECCD200518159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB0213ECCD200518159 /* Main.storyboard */; };
 		D18E7DB4213ECCD200518159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB3213ECCD200518159 /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAddViewController.swift; sourceTree = "<group>"; };
 		03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAddViewController.swift; sourceTree = "<group>"; };
 		03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsAddViewController.swift; sourceTree = "<group>"; };
+		03FD5043214C16520073BC85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03FD5045214C17180073BC85 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
+		03FD5047214C173E0073BC85 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D18E7DA9213ECCD200518159 /* The Plant Eater Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Plant Eater Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E7DAC213ECCD200518159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E7DB1213ECCD200518159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +81,6 @@
 				D18E7DB0213ECCD200518159 /* Main.storyboard */,
 				03F94FEC21401C4400C6AC28 /* MainViewController.swift */,
 				033AE30121468E81004810BF /* SearchViewController.swift */,
-				033AE30521468EFA004810BF /* LoginViewController.swift */,
 				033AE3072146924B004810BF /* RecipeDetailsViewController.swift */,
 				033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */,
 				033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */,
@@ -85,6 +90,9 @@
 				03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */,
 				03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */,
 				03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */,
+				03FD5045214C17180073BC85 /* LoginMainViewController.swift */,
+				033AE30521468EFA004810BF /* LoginViewController.swift */,
+				03FD5047214C173E0073BC85 /* SignUpViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				033AE2F82146759D004810BF /* Utils */,
 				033AE2F72146757D004810BF /* Resources */,
 				D18E7DB8213ECCD200518159 /* Info.plist */,
+				03FD5043214C16520073BC85 /* GoogleService-Info.plist */,
 			);
 			path = "The Plant Eater Cookbook";
 			sourceTree = "<group>";
@@ -215,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18E7DB7213ECCD200518159 /* LaunchScreen.storyboard in Resources */,
+				03FD5044214C16520073BC85 /* GoogleService-Info.plist in Resources */,
 				D18E7DB4213ECCD200518159 /* Assets.xcassets in Resources */,
 				D18E7DB2213ECCD200518159 /* Main.storyboard in Resources */,
 			);
@@ -240,6 +250,8 @@
 				03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */,
 				033AE3082146924B004810BF /* RecipeDetailsViewController.swift in Sources */,
 				03FD503E21494BEE0073BC85 /* ImageAddViewController.swift in Sources */,
+				03FD5046214C17180073BC85 /* LoginMainViewController.swift in Sources */,
+				03FD5048214C173E0073BC85 /* SignUpViewController.swift in Sources */,
 				03E5628B2147F2C6001D21FD /* AddRecipeViewController.swift in Sources */,
 				D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */,
 				03E562AC21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift in Sources */,
@@ -386,7 +398,7 @@
 				DEVELOPMENT_TEAM = VBB722V7P5;
 				INFOPLIST_FILE = "The Plant Eater Cookbook/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "test.The-Plant-Eater-Cookbook";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diplo.The-Plant-Eater-Cookbook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,7 +413,7 @@
 				DEVELOPMENT_TEAM = VBB722V7P5;
 				INFOPLIST_FILE = "The Plant Eater Cookbook/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "test.The-Plant-Eater-Cookbook";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diplo.The-Plant-Eater-Cookbook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
