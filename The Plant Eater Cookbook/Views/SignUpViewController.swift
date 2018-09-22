@@ -5,12 +5,12 @@
 //  Created by James Hallemans on 14/09/18.
 //  Copyright © 2018 SandrineH. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import Firebase
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

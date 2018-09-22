@@ -28,6 +28,7 @@
 		03FD5044214C16520073BC85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FD5043214C16520073BC85 /* GoogleService-Info.plist */; };
 		03FD5046214C17180073BC85 /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD5045214C17180073BC85 /* LoginMainViewController.swift */; };
 		03FD5048214C173E0073BC85 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD5047214C173E0073BC85 /* SignUpViewController.swift */; };
+		401046FCD9E47893B648C453 /* Pods_The_Plant_Eater_Cookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BF2B6BBDE5150069F1FB4D /* Pods_The_Plant_Eater_Cookbook.framework */; };
 		D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E7DAC213ECCD200518159 /* AppDelegate.swift */; };
 		D18E7DB2213ECCD200518159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB0213ECCD200518159 /* Main.storyboard */; };
 		D18E7DB4213ECCD200518159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E7DB3213ECCD200518159 /* Assets.xcassets */; };
@@ -56,6 +57,9 @@
 		03FD5043214C16520073BC85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03FD5045214C17180073BC85 /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
 		03FD5047214C173E0073BC85 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1A6867F4B64DAFC541944FFB /* Pods-The Plant Eater Cookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Plant Eater Cookbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Plant Eater Cookbook/Pods-The Plant Eater Cookbook.debug.xcconfig"; sourceTree = "<group>"; };
+		1BEF3E0EAF039357884AE7B7 /* Pods-The Plant Eater Cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Plant Eater Cookbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Plant Eater Cookbook/Pods-The Plant Eater Cookbook.release.xcconfig"; sourceTree = "<group>"; };
+		88BF2B6BBDE5150069F1FB4D /* Pods_The_Plant_Eater_Cookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Plant_Eater_Cookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E7DA9213ECCD200518159 /* The Plant Eater Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Plant Eater Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E7DAC213ECCD200518159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E7DB1213ECCD200518159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401046FCD9E47893B648C453 /* Pods_The_Plant_Eater_Cookbook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,11 +139,30 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1744665A2A507750DBC35544 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A6867F4B64DAFC541944FFB /* Pods-The Plant Eater Cookbook.debug.xcconfig */,
+				1BEF3E0EAF039357884AE7B7 /* Pods-The Plant Eater Cookbook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91CDF375D20EE43818650CD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88BF2B6BBDE5150069F1FB4D /* Pods_The_Plant_Eater_Cookbook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D18E7DA0213ECCD200518159 = {
 			isa = PBXGroup;
 			children = (
 				D18E7DAB213ECCD200518159 /* The Plant Eater Cookbook */,
 				D18E7DAA213ECCD200518159 /* Products */,
+				1744665A2A507750DBC35544 /* Pods */,
+				91CDF375D20EE43818650CD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D18E7DBB213ECCD200518159 /* Build configuration list for PBXNativeTarget "The Plant Eater Cookbook" */;
 			buildPhases = (
+				C9E8C483DCC4B8670635E080 /* [CP] Check Pods Manifest.lock */,
 				D18E7DA5213ECCD200518159 /* Sources */,
 				D18E7DA6213ECCD200518159 /* Frameworks */,
 				D18E7DA7213ECCD200518159 /* Resources */,
+				88B3B607DE9F248FB328F90E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +257,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88B3B607DE9F248FB328F90E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The Plant Eater Cookbook/Pods-The Plant Eater Cookbook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Plant Eater Cookbook/Pods-The Plant Eater Cookbook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9E8C483DCC4B8670635E080 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Plant Eater Cookbook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D18E7DA5213ECCD200518159 /* Sources */ = {
@@ -392,6 +467,7 @@
 		};
 		D18E7DBC213ECCD200518159 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A6867F4B64DAFC541944FFB /* Pods-The Plant Eater Cookbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +483,7 @@
 		};
 		D18E7DBD213ECCD200518159 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEF3E0EAF039357884AE7B7 /* Pods-The Plant Eater Cookbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
