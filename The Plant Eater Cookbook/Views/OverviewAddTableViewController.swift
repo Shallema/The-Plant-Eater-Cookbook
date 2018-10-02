@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class OverviewAddTableViewController: UITableViewController {
 
@@ -29,6 +29,8 @@ class OverviewAddTableViewController: UITableViewController {
     @IBOutlet weak var cookTimeDatePicker: UIDatePicker!
     
     //MARK: - Instance Properties
+    
+    var savedRecipess = [SavedRecipes]()
     
     struct OverviewContent {
         var title: String = ""
@@ -86,6 +88,13 @@ class OverviewAddTableViewController: UITableViewController {
         updateDateViews()
         updateNumberOfServe()
         
+        let fetchRequest: NSFetchRequest<SavedRecipes> = SavedRecipes.fetchRequest()
+        
+//        do {
+//            let savedRecipe = try PersistenceService.context.fetch(fetchRequest) catch {}
+//            self.savedRecipess = savedRecipe
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -121,6 +130,10 @@ class OverviewAddTableViewController: UITableViewController {
     func updateNumberOfServe() {
         nbServeLabel.text = "\(Int(nbServeStepper.value))"
     }
+    
+    //MARK: - CoreData
+    
+    
     
     //MARK: - IBActions
     

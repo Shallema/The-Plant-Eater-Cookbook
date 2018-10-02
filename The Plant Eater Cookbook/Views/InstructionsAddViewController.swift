@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class InstructionsAddViewController: UIViewController, UITextViewDelegate {
     
@@ -55,7 +56,7 @@ class InstructionsAddViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if instructionsTextView.text.isEmpty {
-            instructionsTextView.text = "Add ingredients..."
+            instructionsTextView.text = "Add instructions..."
             instructionsTextView.textColor = UIColor.lightGray
         }
     }

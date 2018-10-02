@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreData
 
 let primaryColor = UIColor(red: 249/255, green: 132/255, blue: 132/255, alpha: 1)
 let secondaryColor = UIColor(red: 52/255, green: 230/255, blue: 215/255, alpha: 1)
@@ -43,9 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
 
+        PersistenceService.saveContext()
+    }
+    
 
 }
 

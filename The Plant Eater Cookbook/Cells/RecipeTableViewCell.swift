@@ -10,13 +10,11 @@ import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
 
-    
     //MARK: - IBOutlets Properties
+    @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var recipeListImageView: UIImageView!
     @IBOutlet weak var recipeTitleLabel: UILabel!
-    @IBOutlet weak var mainContainerView: UIView!
-    
-    
+
     //MARK: - Prepare
     override func awakeFromNib() {
         super.awakeFromNib()

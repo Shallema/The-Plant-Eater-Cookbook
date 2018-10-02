@@ -123,4 +123,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             categoriesCollectionView.reloadData()
         }
     }
+    
+    @IBAction func uniwindFromQuickAdd(segue: UIStoryboardSegue) {
+        if segue.identifier == "cancelQuickAdd" {
+            categoriesCollectionView.reloadData()
+        }
+    }
 }

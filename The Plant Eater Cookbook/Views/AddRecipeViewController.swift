@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
@@ -15,6 +16,10 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
     @IBOutlet weak var addSegmentedControl: UISegmentedControl!
     
     //MARK: - Instance Properties
+    
+    var savedRecipes = [SavedRecipes]()
+    
+    var recipe = [String]()
     
     var pageViewController: UIPageViewController!
     
@@ -96,6 +101,8 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let savedRecipes = SavedRecipes(context: PersistenceService.context)
         
         for vc in orderedViewControllers{
             switch vc{

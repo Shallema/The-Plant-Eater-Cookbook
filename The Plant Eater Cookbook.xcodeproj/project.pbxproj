@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03135783215E8F36002624C5 /* EdamamAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03135782215E8F36002624C5 /* EdamamAPIController.swift */; };
+		03135785215E9020002624C5 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03135784215E9020002624C5 /* URL+Utils.swift */; };
+		03135787215E9102002624C5 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03135786215E9102002624C5 /* APIModels.swift */; };
+		03135789215EC0E7002624C5 /* RecipeSearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03135788215EC0E7002624C5 /* RecipeSearchResultsTableViewCell.swift */; };
+		031357EA21627942002624C5 /* The_Plant_Eater_Cookbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 031357E821627942002624C5 /* The_Plant_Eater_Cookbook.xcdatamodeld */; };
+		031357EC2162AC25002624C5 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031357EB2162AC25002624C5 /* PersistenceService.swift */; };
 		033AE30221468E81004810BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE30121468E81004810BF /* SearchViewController.swift */; };
 		033AE30621468EFA004810BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE30521468EFA004810BF /* LoginViewController.swift */; };
 		033AE3082146924B004810BF /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE3072146924B004810BF /* RecipeDetailsViewController.swift */; };
@@ -21,6 +27,12 @@
 		037213EF2156DDEF00B11AB7 /* InitialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037213EE2156DDEF00B11AB7 /* InitialLoginViewController.swift */; };
 		037213F12156ED5800B11AB7 /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037213F02156ED5800B11AB7 /* MySpaceViewController.swift */; };
 		037213F32156F46200B11AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 037213F22156F46200B11AB7 /* GoogleService-Info.plist */; };
+		03A0E20921636595007581A7 /* SavedRecipes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E20721636595007581A7 /* SavedRecipes+CoreDataClass.swift */; };
+		03A0E20A21636595007581A7 /* SavedRecipes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E20821636595007581A7 /* SavedRecipes+CoreDataProperties.swift */; };
+		03A0E20C21637DF5007581A7 /* QuickAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E20B21637DF5007581A7 /* QuickAddViewController.swift */; };
+		03A0E2132163A1D3007581A7 /* QuickAdd+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E2112163A1D3007581A7 /* QuickAdd+CoreDataClass.swift */; };
+		03A0E2142163A1D3007581A7 /* QuickAdd+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E2122163A1D3007581A7 /* QuickAdd+CoreDataProperties.swift */; };
+		03A0E2162163DA5F007581A7 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E2152163DA5F007581A7 /* UIView+Utils.swift */; };
 		03E5628B2147F2C6001D21FD /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5628A2147F2C6001D21FD /* AddRecipeViewController.swift */; };
 		03E562AC21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */; };
 		03E562AE214859DE001D21FD /* ChoiceCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562AD214859DE001D21FD /* ChoiceCategoryTableViewCell.swift */; };
@@ -40,6 +52,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03135782215E8F36002624C5 /* EdamamAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamAPIController.swift; sourceTree = "<group>"; };
+		03135784215E9020002624C5 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
+		03135786215E9102002624C5 /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
+		03135788215EC0E7002624C5 /* RecipeSearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		031357E921627942002624C5 /* The-Plant-Eater-Cookbook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "The-Plant-Eater-Cookbook.xcdatamodel"; sourceTree = "<group>"; };
+		031357EB2162AC25002624C5 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		033AE30121468E81004810BF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		033AE30521468EFA004810BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		033AE3072146924B004810BF /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +72,12 @@
 		037213EE2156DDEF00B11AB7 /* InitialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginViewController.swift; sourceTree = "<group>"; };
 		037213F02156ED5800B11AB7 /* MySpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceViewController.swift; sourceTree = "<group>"; };
 		037213F22156F46200B11AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03A0E20721636595007581A7 /* SavedRecipes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedRecipes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		03A0E20821636595007581A7 /* SavedRecipes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedRecipes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		03A0E20B21637DF5007581A7 /* QuickAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddViewController.swift; sourceTree = "<group>"; };
+		03A0E2112163A1D3007581A7 /* QuickAdd+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuickAdd+CoreDataClass.swift"; path = "/Users/jameshallemans/Library/Mobile Documents/com~apple~CloudDocs/Sandrine/The Plant Eater Cookbook/The Plant Eater Cookbook/CoreData/QuickAdd+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		03A0E2122163A1D3007581A7 /* QuickAdd+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuickAdd+CoreDataProperties.swift"; path = "/Users/jameshallemans/Library/Mobile Documents/com~apple~CloudDocs/Sandrine/The Plant Eater Cookbook/The Plant Eater Cookbook/CoreData/QuickAdd+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		03A0E2152163DA5F007581A7 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		03E5628A2147F2C6001D21FD /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryChoiceTableViewController.swift; sourceTree = "<group>"; };
 		03E562AD214859DE001D21FD /* ChoiceCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceCategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03135781215E8F08002624C5 /* APIConnection */ = {
+			isa = PBXGroup;
+			children = (
+				03135782215E8F36002624C5 /* EdamamAPIController.swift */,
+				03135784215E9020002624C5 /* URL+Utils.swift */,
+				03135786215E9102002624C5 /* APIModels.swift */,
+			);
+			path = APIConnection;
+			sourceTree = "<group>";
+		};
 		033AE2F5214674A9004810BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +142,7 @@
 				03FD5047214C173E0073BC85 /* SignUpViewController.swift */,
 				037213EE2156DDEF00B11AB7 /* InitialLoginViewController.swift */,
 				037213F02156ED5800B11AB7 /* MySpaceViewController.swift */,
+				03A0E20B21637DF5007581A7 /* QuickAddViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +169,8 @@
 			children = (
 				033AE30B214694FD004810BF /* Category.swift */,
 				033AE30D2146953B004810BF /* Recipe.swift */,
+				031357EB2162AC25002624C5 /* PersistenceService.swift */,
+				03A0E2152163DA5F007581A7 /* UIView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,6 +182,7 @@
 				033AE31321469EF0004810BF /* RecipeTableViewCell.swift */,
 				033AE3182147A9E6004810BF /* SubCategoriesCollectionViewCell.swift */,
 				03E562AD214859DE001D21FD /* ChoiceCategoryTableViewCell.swift */,
+				03135788215EC0E7002624C5 /* RecipeSearchResultsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -156,6 +194,17 @@
 				033B4ECB2156BA5900769F90 /* HelperExtensions.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		03A0E206216364C9007581A7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				03A0E2112163A1D3007581A7 /* QuickAdd+CoreDataClass.swift */,
+				03A0E2122163A1D3007581A7 /* QuickAdd+CoreDataProperties.swift */,
+				03A0E20721636595007581A7 /* SavedRecipes+CoreDataClass.swift */,
+				03A0E20821636595007581A7 /* SavedRecipes+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		1744665A2A507750DBC35544 /* Pods */ = {
@@ -196,14 +245,17 @@
 		D18E7DAB213ECCD200518159 /* The Plant Eater Cookbook */ = {
 			isa = PBXGroup;
 			children = (
+				03A0E206216364C9007581A7 /* CoreData */,
 				033AE2F6214674E2004810BF /* Application */,
 				033AE2F5214674A9004810BF /* Views */,
+				03135781215E8F08002624C5 /* APIConnection */,
 				033AE3152146AE70004810BF /* Cells */,
 				033AE2F82146759D004810BF /* Utils */,
 				033B4EC82156B88500769F90 /* Design */,
 				033AE2F72146757D004810BF /* Resources */,
 				D18E7DB8213ECCD200518159 /* Info.plist */,
 				037213F22156F46200B11AB7 /* GoogleService-Info.plist */,
+				031357E821627942002624C5 /* The_Plant_Eater_Cookbook.xcdatamodeld */,
 			);
 			path = "The Plant Eater Cookbook";
 			sourceTree = "<group>";
@@ -286,12 +338,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-The Plant Eater Cookbook/Pods-The Plant Eater Cookbook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -327,14 +383,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E562AE214859DE001D21FD /* ChoiceCategoryTableViewCell.swift in Sources */,
+				03A0E2162163DA5F007581A7 /* UIView+Utils.swift in Sources */,
 				033B4ECC2156BA5900769F90 /* HelperExtensions.swift in Sources */,
+				03135785215E9020002624C5 /* URL+Utils.swift in Sources */,
 				037213EF2156DDEF00B11AB7 /* InitialLoginViewController.swift in Sources */,
 				033AE312214698A6004810BF /* ResultRecipesTableViewController.swift in Sources */,
 				033AE3192147A9E6004810BF /* SubCategoriesCollectionViewCell.swift in Sources */,
 				033B4ECA2156B8DC00769F90 /* RoundedWhiteButton.swift in Sources */,
+				03A0E2142163A1D3007581A7 /* QuickAdd+CoreDataProperties.swift in Sources */,
 				033AE30621468EFA004810BF /* LoginViewController.swift in Sources */,
 				033AE30C214694FD004810BF /* Category.swift in Sources */,
 				033AE31421469EF0004810BF /* RecipeTableViewCell.swift in Sources */,
+				031357EA21627942002624C5 /* The_Plant_Eater_Cookbook.xcdatamodeld in Sources */,
+				03135783215E8F36002624C5 /* EdamamAPIController.swift in Sources */,
 				03E562B021486915001D21FD /* OverviewAddTableViewController.swift in Sources */,
 				03FD5042214A57E70073BC85 /* InstructionsAddViewController.swift in Sources */,
 				037213F12156ED5800B11AB7 /* MySpaceViewController.swift in Sources */,
@@ -342,14 +403,21 @@
 				033AE3102146981A004810BF /* SubCategoriesCollectionViewController.swift in Sources */,
 				03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */,
 				033AE3082146924B004810BF /* RecipeDetailsViewController.swift in Sources */,
+				03135789215EC0E7002624C5 /* RecipeSearchResultsTableViewCell.swift in Sources */,
+				03A0E20A21636595007581A7 /* SavedRecipes+CoreDataProperties.swift in Sources */,
 				03FD503E21494BEE0073BC85 /* ImageAddViewController.swift in Sources */,
 				03FD5046214C17180073BC85 /* LoginMainViewController.swift in Sources */,
 				03FD5048214C173E0073BC85 /* SignUpViewController.swift in Sources */,
+				03A0E2132163A1D3007581A7 /* QuickAdd+CoreDataClass.swift in Sources */,
 				03E5628B2147F2C6001D21FD /* AddRecipeViewController.swift in Sources */,
 				D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */,
 				03E562AC21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift in Sources */,
+				03A0E20921636595007581A7 /* SavedRecipes+CoreDataClass.swift in Sources */,
+				03135787215E9102002624C5 /* APIModels.swift in Sources */,
+				031357EC2162AC25002624C5 /* PersistenceService.swift in Sources */,
 				03F94FED21401C4400C6AC28 /* MainViewController.swift in Sources */,
 				03FD5040214A57650073BC85 /* IngredientsAddViewController.swift in Sources */,
+				03A0E20C21637DF5007581A7 /* QuickAddViewController.swift in Sources */,
 				033AE30E2146953B004810BF /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +556,7 @@
 			baseConfigurationReference = 1A6867F4B64DAFC541944FFB /* Pods-The Plant Eater Cookbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VBB722V7P5;
 				INFOPLIST_FILE = "The Plant Eater Cookbook/Info.plist";
@@ -504,6 +573,7 @@
 			baseConfigurationReference = 1BEF3E0EAF039357884AE7B7 /* Pods-The Plant Eater Cookbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VBB722V7P5;
 				INFOPLIST_FILE = "The Plant Eater Cookbook/Info.plist";
@@ -537,6 +607,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		031357E821627942002624C5 /* The_Plant_Eater_Cookbook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				031357E921627942002624C5 /* The-Plant-Eater-Cookbook.xcdatamodel */,
+			);
+			currentVersion = 031357E921627942002624C5 /* The-Plant-Eater-Cookbook.xcdatamodel */;
+			path = The_Plant_Eater_Cookbook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D18E7DA1213ECCD200518159 /* Project object */;
 }

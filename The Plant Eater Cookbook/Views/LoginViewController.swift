@@ -102,8 +102,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         setContinueButton(enabled: formFilled)
     }
     
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         // Resigns the target textField and assigns the next textField in the form.

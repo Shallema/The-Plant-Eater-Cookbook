@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ImageAddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
