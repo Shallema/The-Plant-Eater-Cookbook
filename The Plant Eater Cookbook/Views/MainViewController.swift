@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    //MARK: - IBOutlets Properties
+    //MARK:- IBOutlets Properties
     
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
-    //MARK: - Instance Properties
+    
+    //MARK:- Instance Properties
 
     let catImages: [UIImage] = [
         UIImage(named: "cat1")!,
@@ -40,7 +42,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var categories = Category.fetchAllCategories()
     
-    //MARK: - ViewController Life Cycle
+    
+    //MARK:- ViewController Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     //MARK: - UICollectionView DataSource
     
@@ -99,12 +103,16 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    
+    
+    //MARK: - IBActions
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
         if segue.identifier == "exitSearch" {

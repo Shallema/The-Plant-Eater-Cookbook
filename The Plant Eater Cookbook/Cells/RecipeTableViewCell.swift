@@ -10,12 +10,14 @@ import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
 
-    //MARK: - IBOutlets Properties
+    //MARK:- IBOutlets Properties
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var recipeListImageView: UIImageView!
     @IBOutlet weak var recipeTitleLabel: UILabel!
+    @IBOutlet weak var recipeBriefDescrLabel: UILabel!
 
-    //MARK: - Prepare
+    
+    //MARK:- Prepare
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +29,12 @@ class RecipeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func update(with savedRecipe: SavedRecipes) {
+        recipeTitleLabel.text = savedRecipe.name
+        recipeBriefDescrLabel.text = savedRecipe.shortDescr
+        //recipeListImageView = savedRecipe.image
     }
 
 }

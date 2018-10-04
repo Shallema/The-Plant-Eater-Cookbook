@@ -33,12 +33,6 @@ extension UIButton {
 
 extension UIView {
     
-    /**
-     Adds a vertical gradient layer with two **UIColors** to the **UIView**.
-     - Parameter topColor: The top **UIColor**.
-     - Parameter bottomColor: The bottom **UIColor**.
-     */
-    
     func addVerticalGradientLayer(topColor:UIColor, bottomColor:UIColor) {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds

@@ -16,13 +16,15 @@ class RecipeSearchResultsTableViewCell: UITableViewCell {
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeInfoLabel: UILabel!
     
-    var recipe: Recipes?{
+    var recipe: EdamamRecipe?{
         didSet{
             guard let recipe = recipe else {
                 return
             }
-            
-            //self.recipeImageView.af_setImage(withURL: recipe.image, placeholerImage: )
+            if let imgUrl =  URL(string: recipe.image) {
+                 self.recipeImageView.af_setImage(withURL: imgUrl, placeholderImage: UIImage(named: "cat3")!)
+            }
+           
             self.recipeNameLabel.text = recipe.label
             self.recipeInfoLabel.text = recipe.url
         }

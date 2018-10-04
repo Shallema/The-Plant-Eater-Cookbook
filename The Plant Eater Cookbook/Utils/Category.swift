@@ -28,11 +28,13 @@ class Category: Equatable {
         let starter = Category(id: 1, name: "Starter", image: "")
         let main = Category(id: 2, name: "Main", image: "")
         let sweet = Category(id: 3, name: "Sweet", image: "")
-        let drink = Category(id: 4, name: "Drink", image: "")
-        let snack = Category(id: 5, name: "Snack", image: "")
-        let all = Category(id: 6, name: "All", image: "")
+        let snack = Category(id: 4, name: "Snack", image: "")
+        let sides = Category(id: 5, name: "Sides", image: "")
+        let breakfast = Category(id: 6, name: "Breakfast", image: "")
+        let drink = Category(id: 7, name: "Beverages", image: "")
+        let all = Category(id: 8, name: "All", image: "")
         
-        return [starter, main, sweet, drink, snack, all]
+        return [starter, main, sweet, drink, sides, breakfast, snack, all]
     }
 
 }
@@ -69,8 +71,9 @@ class SubCategory: Category {
                 SubCategory(id: 10, name: "Juice", image: "", category: drink),
                 SubCategory(id: 11, name: "Vegan Cheese", image: "", category: snack),
                 SubCategory(id: 12, name: "Salad", image: "", category: sides),
-                SubCategory(id: 13, name: "Juice", image: "", category: drink),
-                SubCategory(id: 14, name: "All", image: "", category: all)]
+                SubCategory(id: 13, name: "Iced Tea", image: "", category: drink),
+                SubCategory(id: 14, name: "Tofu", image: "", category: main),
+                SubCategory(id: 15, name: "All", image: "", category: all)]
     }
     
     static func getSubcategories(for category: Category) -> [SubCategory]{

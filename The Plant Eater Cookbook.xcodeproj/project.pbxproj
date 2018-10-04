@@ -24,7 +24,10 @@
 		033AE3192147A9E6004810BF /* SubCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE3182147A9E6004810BF /* SubCategoriesCollectionViewCell.swift */; };
 		033B4ECA2156B8DC00769F90 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B4EC92156B8DC00769F90 /* RoundedWhiteButton.swift */; };
 		033B4ECC2156BA5900769F90 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B4ECB2156BA5900769F90 /* HelperExtensions.swift */; };
-		037213EF2156DDEF00B11AB7 /* InitialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037213EE2156DDEF00B11AB7 /* InitialLoginViewController.swift */; };
+		0354918E2165F66B00539236 /* FoodCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354918A2165F66B00539236 /* FoodCategory+CoreDataClass.swift */; };
+		0354918F2165F66B00539236 /* FoodCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354918B2165F66B00539236 /* FoodCategory+CoreDataProperties.swift */; };
+		035491902165F66B00539236 /* FoodSubcategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354918C2165F66B00539236 /* FoodSubcategory+CoreDataClass.swift */; };
+		035491912165F66B00539236 /* FoodSubcategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354918D2165F66B00539236 /* FoodSubcategory+CoreDataProperties.swift */; };
 		037213F12156ED5800B11AB7 /* MySpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037213F02156ED5800B11AB7 /* MySpaceViewController.swift */; };
 		037213F32156F46200B11AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 037213F22156F46200B11AB7 /* GoogleService-Info.plist */; };
 		03A0E20921636595007581A7 /* SavedRecipes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0E20721636595007581A7 /* SavedRecipes+CoreDataClass.swift */; };
@@ -39,6 +42,7 @@
 		03E562B021486915001D21FD /* OverviewAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */; };
 		03F94FE9213FC37700C6AC28 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */; };
 		03F94FED21401C4400C6AC28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F94FEC21401C4400C6AC28 /* MainViewController.swift */; };
+		03F9F48121640FB000292BDC /* WTFMapKitUserLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9F48021640FB000292BDC /* WTFMapKitUserLocationViewController.swift */; };
 		03FD503E21494BEE0073BC85 /* ImageAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */; };
 		03FD5040214A57650073BC85 /* IngredientsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */; };
 		03FD5042214A57E70073BC85 /* InstructionsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */; };
@@ -69,7 +73,10 @@
 		033AE3182147A9E6004810BF /* SubCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		033B4EC92156B8DC00769F90 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
 		033B4ECB2156BA5900769F90 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
-		037213EE2156DDEF00B11AB7 /* InitialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginViewController.swift; sourceTree = "<group>"; };
+		0354918A2165F66B00539236 /* FoodCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0354918B2165F66B00539236 /* FoodCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0354918C2165F66B00539236 /* FoodSubcategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSubcategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0354918D2165F66B00539236 /* FoodSubcategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodSubcategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		037213F02156ED5800B11AB7 /* MySpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceViewController.swift; sourceTree = "<group>"; };
 		037213F22156F46200B11AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03A0E20721636595007581A7 /* SavedRecipes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedRecipes+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAddTableViewController.swift; sourceTree = "<group>"; };
 		03F94FE8213FC37700C6AC28 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F94FEC21401C4400C6AC28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		03F9F48021640FB000292BDC /* WTFMapKitUserLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTFMapKitUserLocationViewController.swift; sourceTree = "<group>"; };
 		03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAddViewController.swift; sourceTree = "<group>"; };
 		03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAddViewController.swift; sourceTree = "<group>"; };
 		03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsAddViewController.swift; sourceTree = "<group>"; };
@@ -127,22 +135,12 @@
 			children = (
 				D18E7DB0213ECCD200518159 /* Main.storyboard */,
 				03F94FEC21401C4400C6AC28 /* MainViewController.swift */,
-				033AE30121468E81004810BF /* SearchViewController.swift */,
-				033AE3072146924B004810BF /* RecipeDetailsViewController.swift */,
-				033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */,
-				033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */,
-				03E5628A2147F2C6001D21FD /* AddRecipeViewController.swift */,
-				03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */,
-				03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */,
-				03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */,
-				03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */,
-				03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */,
-				03FD5045214C17180073BC85 /* LoginMainViewController.swift */,
-				033AE30521468EFA004810BF /* LoginViewController.swift */,
-				03FD5047214C173E0073BC85 /* SignUpViewController.swift */,
-				037213EE2156DDEF00B11AB7 /* InitialLoginViewController.swift */,
-				037213F02156ED5800B11AB7 /* MySpaceViewController.swift */,
-				03A0E20B21637DF5007581A7 /* QuickAddViewController.swift */,
+				035491932166455700539236 /* ListOfSavedRecipes */,
+				035491942166459F00539236 /* AddRecipe */,
+				03549195216645B500539236 /* MySpace */,
+				03549196216645CD00539236 /* QuickAdd */,
+				03549197216645DE00539236 /* Map */,
+				035491922166450A00539236 /* Trash */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,8 +167,8 @@
 			children = (
 				033AE30B214694FD004810BF /* Category.swift */,
 				033AE30D2146953B004810BF /* Recipe.swift */,
-				031357EB2162AC25002624C5 /* PersistenceService.swift */,
 				03A0E2152163DA5F007581A7 /* UIView+Utils.swift */,
+				031357EB2162AC25002624C5 /* PersistenceService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -196,9 +194,71 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
+		035491922166450A00539236 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				033AE30121468E81004810BF /* SearchViewController.swift */,
+				033AE30F2146981A004810BF /* SubCategoriesCollectionViewController.swift */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		035491932166455700539236 /* ListOfSavedRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				033AE311214698A6004810BF /* ResultRecipesTableViewController.swift */,
+				033AE3072146924B004810BF /* RecipeDetailsViewController.swift */,
+			);
+			path = ListOfSavedRecipes;
+			sourceTree = "<group>";
+		};
+		035491942166459F00539236 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				03E5628A2147F2C6001D21FD /* AddRecipeViewController.swift */,
+				03E562AF21486915001D21FD /* OverviewAddTableViewController.swift */,
+				03E562AB21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift */,
+				03FD503F214A57650073BC85 /* IngredientsAddViewController.swift */,
+				03FD5041214A57E70073BC85 /* InstructionsAddViewController.swift */,
+				03FD503D21494BEE0073BC85 /* ImageAddViewController.swift */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
+		03549195216645B500539236 /* MySpace */ = {
+			isa = PBXGroup;
+			children = (
+				03FD5045214C17180073BC85 /* LoginMainViewController.swift */,
+				033AE30521468EFA004810BF /* LoginViewController.swift */,
+				03FD5047214C173E0073BC85 /* SignUpViewController.swift */,
+				037213F02156ED5800B11AB7 /* MySpaceViewController.swift */,
+			);
+			path = MySpace;
+			sourceTree = "<group>";
+		};
+		03549196216645CD00539236 /* QuickAdd */ = {
+			isa = PBXGroup;
+			children = (
+				03A0E20B21637DF5007581A7 /* QuickAddViewController.swift */,
+			);
+			path = QuickAdd;
+			sourceTree = "<group>";
+		};
+		03549197216645DE00539236 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				03F9F48021640FB000292BDC /* WTFMapKitUserLocationViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		03A0E206216364C9007581A7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				0354918A2165F66B00539236 /* FoodCategory+CoreDataClass.swift */,
+				0354918B2165F66B00539236 /* FoodCategory+CoreDataProperties.swift */,
+				0354918C2165F66B00539236 /* FoodSubcategory+CoreDataClass.swift */,
+				0354918D2165F66B00539236 /* FoodSubcategory+CoreDataProperties.swift */,
 				03A0E2112163A1D3007581A7 /* QuickAdd+CoreDataClass.swift */,
 				03A0E2122163A1D3007581A7 /* QuickAdd+CoreDataProperties.swift */,
 				03A0E20721636595007581A7 /* SavedRecipes+CoreDataClass.swift */,
@@ -382,11 +442,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F9F48121640FB000292BDC /* WTFMapKitUserLocationViewController.swift in Sources */,
+				0354918E2165F66B00539236 /* FoodCategory+CoreDataClass.swift in Sources */,
 				03E562AE214859DE001D21FD /* ChoiceCategoryTableViewCell.swift in Sources */,
 				03A0E2162163DA5F007581A7 /* UIView+Utils.swift in Sources */,
 				033B4ECC2156BA5900769F90 /* HelperExtensions.swift in Sources */,
+				035491902165F66B00539236 /* FoodSubcategory+CoreDataClass.swift in Sources */,
 				03135785215E9020002624C5 /* URL+Utils.swift in Sources */,
-				037213EF2156DDEF00B11AB7 /* InitialLoginViewController.swift in Sources */,
+				035491912165F66B00539236 /* FoodSubcategory+CoreDataProperties.swift in Sources */,
 				033AE312214698A6004810BF /* ResultRecipesTableViewController.swift in Sources */,
 				033AE3192147A9E6004810BF /* SubCategoriesCollectionViewCell.swift in Sources */,
 				033B4ECA2156B8DC00769F90 /* RoundedWhiteButton.swift in Sources */,
@@ -410,6 +473,7 @@
 				03FD5048214C173E0073BC85 /* SignUpViewController.swift in Sources */,
 				03A0E2132163A1D3007581A7 /* QuickAdd+CoreDataClass.swift in Sources */,
 				03E5628B2147F2C6001D21FD /* AddRecipeViewController.swift in Sources */,
+				0354918F2165F66B00539236 /* FoodCategory+CoreDataProperties.swift in Sources */,
 				D18E7DAD213ECCD200518159 /* AppDelegate.swift in Sources */,
 				03E562AC21484FE5001D21FD /* AddCategoryChoiceTableViewController.swift in Sources */,
 				03A0E20921636595007581A7 /* SavedRecipes+CoreDataClass.swift in Sources */,

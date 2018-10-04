@@ -14,18 +14,31 @@ class EdamamAPIController {
     
     static let baseURL = URL(string: "https://api.edamam.com/search?")!
     
-    func search(withQuery query: [String: String], completionHandler: @escaping ([Recipes]) -> Void) {
-        let searchURL = EdamamAPIController.baseURL.withQueries(query)!
+
+    
+    func search(withQuery query: String, completionHandler: @escaping ([EdamamRecipe]) -> Void) {
+//        let params = ["app_id": "480e6bf7", "app_key": "58c6e7a6db9850b6210b1af9c77cbc79",
+//                      "from": "0" , "to": "9", "health": "vegan", "q": query]
+//
+//        let searchURL2 = EdamamAPIController.baseURL.withQueries(params)!
+//
+        let strUrl = "https://api.edamam.com/search?app_id=480e6bf7&health=vegan&from=0&app_key=58c6e7a6db9850b6210b1af9c77cbc79&to=9&q=\(query.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)"
+        
+        
+        let searchURL = URL(string: strUrl)!
+
         URLSession.shared.dataTask(with: searchURL) { (data, response, error) in
-            
+
             if let data = data {
-                let searchValues: [Recipes]
+           
+                var searchValues: [EdamamRecipe] = []
                 do {
                     let apiDescr = try JSONDecoder().decode(ApiDescr.self, from: data)
-                    searchValues = apiDescr.hits
+                    for hit in apiDescr.hits {
+                        searchValues.append(hit.recipe)
+                    }
                 } catch {
                     print("Parsing Error: \(error)")
-                    searchValues = []
                 }
                 DispatchQueue.main.async {
                     completionHandler(searchValues)
