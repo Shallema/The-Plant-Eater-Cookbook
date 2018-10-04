@@ -18,8 +18,8 @@ class SearchViewController: UIViewController, /*UITableViewDataSource,*/ UITable
     
     //MARK: - IBOutelts Properties
     
-    @IBOutlet weak var recipeSearchBar: UISearchBar!
-    @IBOutlet weak var recipesResultsTableView: UITableView!
+//    @IBOutlet weak var recipeSearchBar: UISearchBar!
+//    @IBOutlet weak var recipesResultsTableView: UITableView!
     
     
     //MARK: - ViewController Life Cycle

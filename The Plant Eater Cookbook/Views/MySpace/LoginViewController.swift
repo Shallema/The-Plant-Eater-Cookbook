@@ -18,13 +18,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     
     
+    //MARK: - Instance Properties
+    
     var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
-
-    @IBAction func exitLoginPageButton(_ sender: Any) {
-        
-    }
     
+
+    //MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

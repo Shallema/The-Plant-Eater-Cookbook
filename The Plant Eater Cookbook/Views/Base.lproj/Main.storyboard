@@ -714,76 +714,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-SL-nHH">
-                                <rect key="frame" x="16" y="86" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-SL-nHH">
+                                <rect key="frame" x="16" y="68" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSg-zB-RNc">
-                                <rect key="frame" x="16" y="197" width="343" height="21"/>
+                                <rect key="frame" x="16" y="128" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-MB-DoH">
-                                <rect key="frame" x="20" y="227" width="336" height="30"/>
+                                <rect key="frame" x="20" y="158" width="336" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43c-RJ-8kp">
-                                <rect key="frame" x="20" y="252" width="337" height="1"/>
+                                <rect key="frame" x="20" y="183" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzd-pE-IuH">
-                                <rect key="frame" x="16" y="280" width="343" height="21"/>
+                                <rect key="frame" x="16" y="211" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAW-Y4-lw2">
-                                <rect key="frame" x="19" y="310" width="337" height="30"/>
+                                <rect key="frame" x="19" y="241" width="337" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgF-df-wZe">
-                                <rect key="frame" x="16" y="363" width="343" height="21"/>
+                                <rect key="frame" x="16" y="294" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjH-5F-jgF">
-                                <rect key="frame" x="19" y="393" width="337" height="30"/>
+                                <rect key="frame" x="19" y="324" width="337" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-Sw-P7O">
-                                <rect key="frame" x="19" y="418" width="337" height="1"/>
+                                <rect key="frame" x="19" y="349" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6h-N9-Vqb">
-                                <rect key="frame" x="19" y="335" width="337" height="1"/>
+                                <rect key="frame" x="19" y="266" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8I-ef-jtl">
-                                <rect key="frame" x="335" y="36" width="24" height="24"/>
+                                <rect key="frame" x="16" y="36" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="9yk-aK-3xb"/>
-                                    <constraint firstAttribute="width" constant="24" id="xKw-D8-XA1"/>
+                                    <constraint firstAttribute="width" constant="24" id="0Ie-xv-f5g"/>
+                                    <constraint firstAttribute="height" constant="24" id="oHG-9F-esl"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="access-denied-4"/>
+                                <state key="normal" title="Button" image="back"/>
                                 <connections>
                                     <segue destination="P3K-DJ-vlw" kind="unwind" unwindAction="unwindLogInSender:" id="I8W-bK-F2C"/>
                                 </connections>
@@ -792,10 +792,10 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gSf-E7-nxy" firstAttribute="trailing" secondItem="6cA-SL-nHH" secondAttribute="trailing" constant="16" id="BUM-Pu-pBY"/>
-                            <constraint firstItem="gSf-E7-nxy" firstAttribute="trailing" secondItem="H8I-ef-jtl" secondAttribute="trailing" constant="16" id="Efy-Jt-G2n"/>
                             <constraint firstItem="6cA-SL-nHH" firstAttribute="leading" secondItem="gSf-E7-nxy" secondAttribute="leading" constant="16" id="EqY-C8-Uoa"/>
+                            <constraint firstItem="H8I-ef-jtl" firstAttribute="top" secondItem="gSf-E7-nxy" secondAttribute="top" constant="16" id="Qha-da-uWk"/>
                             <constraint firstItem="6cA-SL-nHH" firstAttribute="top" secondItem="gSf-E7-nxy" secondAttribute="top" constant="66" id="ad8-6U-OEb"/>
-                            <constraint firstItem="H8I-ef-jtl" firstAttribute="top" secondItem="gSf-E7-nxy" secondAttribute="top" constant="16" id="ktQ-iY-Dae"/>
+                            <constraint firstItem="H8I-ef-jtl" firstAttribute="leading" secondItem="gSf-E7-nxy" secondAttribute="leading" constant="16" id="mGf-VK-GxB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gSf-E7-nxy"/>
                     </view>
@@ -818,70 +818,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWz-ia-Kuf">
-                                <rect key="frame" x="16" y="86" width="343" height="21"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoZ-Py-aZB">
-                                <rect key="frame" x="16" y="213" width="343" height="21"/>
+                                <rect key="frame" x="16" y="162" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qoq-Yt-5sT">
-                                <rect key="frame" x="16" y="245" width="343" height="30"/>
+                                <rect key="frame" x="16" y="194" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="email"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAJ-N0-zit">
-                                <rect key="frame" x="16" y="271" width="337" height="1"/>
+                                <rect key="frame" x="16" y="220" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-B6-Gbp">
-                                <rect key="frame" x="16" y="311" width="343" height="21"/>
+                                <rect key="frame" x="16" y="260" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pau-x8-un2">
-                                <rect key="frame" x="16" y="343" width="343" height="30"/>
+                                <rect key="frame" x="16" y="292" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqZ-Ud-4JU">
-                                <rect key="frame" x="16" y="369" width="337" height="1"/>
+                                <rect key="frame" x="16" y="318" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y30-Cq-qm1">
-                                <rect key="frame" x="335" y="36" width="24" height="24"/>
+                                <rect key="frame" x="16" y="36" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="MtH-5E-QeD"/>
-                                    <constraint firstAttribute="width" constant="24" id="egX-eH-bdE"/>
+                                    <constraint firstAttribute="width" constant="24" id="LKx-aU-bVh"/>
+                                    <constraint firstAttribute="height" constant="24" id="b6T-AM-78f"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="access-denied-4"/>
+                                <state key="normal" title="Button" image="back"/>
                                 <connections>
-                                    <action selector="exitLoginPageButton:" destination="WuA-IS-h5i" eventType="touchUpInside" id="WuI-6t-57F"/>
                                     <segue destination="Oi1-x8-DMR" kind="unwind" unwindAction="unwindLogInSender:" id="itY-UU-UED"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWz-ia-Kuf">
+                                <rect key="frame" x="16" y="68" width="343" height="21"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e9E-mS-RM2" firstAttribute="trailing" secondItem="y30-Cq-qm1" secondAttribute="trailing" constant="16" id="b1H-XS-1Xl"/>
+                            <constraint firstItem="y30-Cq-qm1" firstAttribute="top" secondItem="e9E-mS-RM2" secondAttribute="top" constant="16" id="K4i-Y3-qsB"/>
                             <constraint firstItem="e9E-mS-RM2" firstAttribute="trailing" secondItem="FWz-ia-Kuf" secondAttribute="trailing" constant="16" id="ebO-Lp-r5t"/>
-                            <constraint firstItem="y30-Cq-qm1" firstAttribute="top" secondItem="e9E-mS-RM2" secondAttribute="top" constant="16" id="hu4-Mi-kv2"/>
                             <constraint firstItem="FWz-ia-Kuf" firstAttribute="leading" secondItem="e9E-mS-RM2" secondAttribute="leading" constant="16" id="iA0-3Y-SaG"/>
                             <constraint firstItem="FWz-ia-Kuf" firstAttribute="top" secondItem="e9E-mS-RM2" secondAttribute="top" constant="66" id="im8-ZK-Ipy"/>
+                            <constraint firstItem="y30-Cq-qm1" firstAttribute="leading" secondItem="e9E-mS-RM2" secondAttribute="leading" constant="16" id="xmp-JK-dRQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e9E-mS-RM2"/>
                     </view>
@@ -1268,7 +1267,7 @@
     <resources>
         <image name="Diplodocus" width="1755.75" height="2177.25"/>
         <image name="WTF" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="access-denied-4" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="back" width="204.80000305175781" height="204.80000305175781"/>
         <image name="icons8-dinosaur-32" width="24" height="24"/>
         <image name="icons8-hamburger-30" width="22.5" height="22.5"/>
         <image name="recipe-book-2" width="19.200000762939453" height="19.200000762939453"/>
