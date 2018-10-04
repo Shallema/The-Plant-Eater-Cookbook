@@ -150,7 +150,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if error == nil && user != nil {
                 self.dismiss(animated: false, completion: nil)
             } else {
-                print("Error logging in: \(error!.localizedDescription)")
+                let alert = UIAlertController(title: "Alert", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+//                print("Error logging in: \(error!.localizedDescription)")
             }
         }
     }

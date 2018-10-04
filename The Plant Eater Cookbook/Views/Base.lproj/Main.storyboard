@@ -1009,22 +1009,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nU0-1U-dis">
-                                            <rect key="frame" x="0.0" y="-26" width="375" height="139"/>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nU0-1U-dis">
+                                            <rect key="frame" x="0.0" y="-12" width="375" height="114"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ec-nEz">
                                                     <rect key="frame" x="8" y="13" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPq-fc-xPp">
-                                                    <rect key="frame" x="107" y="16" width="239" height="19"/>
+                                                    <rect key="frame" x="107" y="16" width="260" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-8f-qlr">
-                                                    <rect key="frame" x="106" y="43" width="239" height="15"/>
+                                                    <rect key="frame" x="106" y="43" width="261" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -1034,12 +1035,6 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="nU0-1U-dis" secondAttribute="bottom" id="9rI-s6-Mcx"/>
-                                        <constraint firstAttribute="trailing" secondItem="nU0-1U-dis" secondAttribute="trailing" id="Od4-Gm-YRC"/>
-                                        <constraint firstItem="nU0-1U-dis" firstAttribute="leading" secondItem="4nu-O1-jWp" secondAttribute="leading" id="e5D-sH-Hvo"/>
-                                        <constraint firstItem="nU0-1U-dis" firstAttribute="top" secondItem="4nu-O1-jWp" secondAttribute="top" id="gOd-cU-VsM"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="mainContainerView" destination="nU0-1U-dis" id="BeJ-3a-9Ms"/>
