@@ -35,6 +35,10 @@ class MySpaceViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.recipeResultsTableView.contentInset = UIEdgeInsets(top: 56, left: 0, bottom: 0, right: 0)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     //MARK:- TableView Datasource
     
@@ -56,17 +60,17 @@ class MySpaceViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK:- TableView Delegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 120
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.fadeIn(delay: 0.25)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let recipe = self.recipeResults![indexPath.row]
-        self.performSegue(withIdentifier: MySpaceViewController.recipeDetailsSegue , sender: recipe)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let recipe = self.recipeResults![indexPath.row]
+//        self.performSegue(withIdentifier: MySpaceViewController.recipeDetailsSegue , sender: recipe)
+//    }
     
     
     //MARK:- SearchBar Delegate
@@ -79,7 +83,6 @@ class MySpaceViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             self.launchSearch(withTerm: searchText)
         })
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -96,7 +99,6 @@ class MySpaceViewController: UIViewController, UITableViewDelegate, UITableViewD
         guard !term.isEmpty && self.lastSearchTerm != term else {
             return
         }
-        
         
         EdamamAPIController.shared.search(withQuery: term) { (searchResults) in
             
@@ -118,5 +120,9 @@ class MySpaceViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func handleLogout(_ sender:Any) {
         try! Auth.auth().signOut()
         self.navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "Hourray", message: "You're successfully logged out !", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel)
+        alert.addAction(dismiss)
+        self.present(alert, animated: true)
     }
 }

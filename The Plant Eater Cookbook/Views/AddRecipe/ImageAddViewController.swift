@@ -19,23 +19,21 @@ class ImageAddViewController: UIViewController, UIImagePickerControllerDelegate,
     //MARK: - Instance Propeties
     
     struct ImageContent {
-        var image: UIImageView?
+        var image: UIImage?
     }
-    
-    //var imageContent: ImageContent = ImageContent()
     
     var imageContent: ImageContent? {
-        let image = addImageView
-
+        self.loadViewIfNeeded()
+        let image = addImageView.image
         return ImageContent(image: image)
     }
+    
     
     //MARK: - ViewController Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

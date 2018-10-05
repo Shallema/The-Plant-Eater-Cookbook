@@ -659,13 +659,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Diplodocus" translatesAutoresizingMaskIntoConstraints="NO" id="65x-fx-Jv8">
-                                <rect key="frame" x="52" y="154" width="270" height="312"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diplodocus" translatesAutoresizingMaskIntoConstraints="NO" id="65x-fx-Jv8">
+                                <rect key="frame" x="55" y="181" width="265" height="305"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w40-Wy-vGI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w40-Wy-vGI">
                                 <rect key="frame" x="16" y="508" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="83o-LA-c0f"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -674,9 +675,8 @@
                                     <segue destination="WuA-IS-h5i" kind="presentation" modalTransitionStyle="crossDissolve" id="1bj-mU-D0B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gk-NM-o5Y">
-                                <rect key="frame" x="16" y="546" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gk-NM-o5Y">
+                                <rect key="frame" x="16" y="549" width="343" height="30"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -685,14 +685,48 @@
                                     <segue destination="8bt-rm-DUo" kind="presentation" modalTransitionStyle="crossDissolve" id="wq8-Jn-zgY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Own Space !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNC-Up-htA">
-                                <rect key="frame" x="16" y="88" width="343" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thinking-3" translatesAutoresizingMaskIntoConstraints="NO" id="l21-aj-n3g">
+                                <rect key="frame" x="217" y="117" width="87" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="YAJ-zM-HIx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ramen-2" translatesAutoresizingMaskIntoConstraints="NO" id="oXQ-ZR-AQD">
+                                <rect key="frame" x="241" y="135" width="39" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="FmF-vW-drp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Own Space !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNC-Up-htA">
+                                <rect key="frame" x="16" y="70" width="343" height="25"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.68545748179999999" green="0.83914974620000005" blue="0.79938414999999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ngB-fC-kLe" firstAttribute="trailing" secondItem="l21-aj-n3g" secondAttribute="trailing" constant="71" id="3CV-eh-Hf7"/>
+                            <constraint firstItem="0gk-NM-o5Y" firstAttribute="trailing" secondItem="w40-Wy-vGI" secondAttribute="trailing" id="76u-gU-i0K"/>
+                            <constraint firstItem="65x-fx-Jv8" firstAttribute="top" secondItem="oXQ-ZR-AQD" secondAttribute="bottom" constant="8" symbolic="YES" id="AXY-Pa-ppB"/>
+                            <constraint firstItem="w40-Wy-vGI" firstAttribute="leading" secondItem="vCn-QZ-SXx" secondAttribute="leadingMargin" id="Bk4-El-edq"/>
+                            <constraint firstItem="0gk-NM-o5Y" firstAttribute="top" secondItem="w40-Wy-vGI" secondAttribute="bottom" constant="11" id="CGU-gZ-TyK"/>
+                            <constraint firstItem="65x-fx-Jv8" firstAttribute="centerX" secondItem="w40-Wy-vGI" secondAttribute="centerX" id="EER-6A-Qzn"/>
+                            <constraint firstItem="l21-aj-n3g" firstAttribute="leading" secondItem="ngB-fC-kLe" secondAttribute="leading" constant="217" id="EbV-Gk-rFF"/>
+                            <constraint firstItem="l21-aj-n3g" firstAttribute="centerX" secondItem="oXQ-ZR-AQD" secondAttribute="centerX" id="HaR-qe-jtw"/>
+                            <constraint firstItem="65x-fx-Jv8" firstAttribute="centerY" secondItem="vCn-QZ-SXx" secondAttribute="centerY" id="IwC-lM-p0g"/>
+                            <constraint firstItem="ngB-fC-kLe" firstAttribute="bottom" secondItem="0gk-NM-o5Y" secondAttribute="bottom" constant="39" id="KW5-xo-4xW"/>
+                            <constraint firstItem="65x-fx-Jv8" firstAttribute="leading" secondItem="ngB-fC-kLe" secondAttribute="leading" constant="55" id="Q8D-Qa-yG7"/>
+                            <constraint firstItem="oXQ-ZR-AQD" firstAttribute="top" secondItem="JNC-Up-htA" secondAttribute="bottom" constant="40" id="QXl-LD-NTS"/>
+                            <constraint firstItem="w40-Wy-vGI" firstAttribute="trailing" secondItem="vCn-QZ-SXx" secondAttribute="trailingMargin" id="XwD-cC-gDH"/>
+                            <constraint firstItem="JNC-Up-htA" firstAttribute="leading" secondItem="w40-Wy-vGI" secondAttribute="leading" id="aVQ-7N-aYk"/>
+                            <constraint firstItem="JNC-Up-htA" firstAttribute="trailing" secondItem="w40-Wy-vGI" secondAttribute="trailing" id="cZt-Bh-jis"/>
+                            <constraint firstAttribute="bottom" secondItem="w40-Wy-vGI" secondAttribute="bottom" constant="129" id="kVl-cJ-4h6"/>
+                            <constraint firstItem="JNC-Up-htA" firstAttribute="top" secondItem="ngB-fC-kLe" secondAttribute="top" constant="6" id="r7n-X9-1Ky"/>
+                            <constraint firstItem="oXQ-ZR-AQD" firstAttribute="leading" secondItem="ngB-fC-kLe" secondAttribute="leading" constant="241" id="tzT-9a-C4I"/>
+                            <constraint firstItem="w40-Wy-vGI" firstAttribute="top" secondItem="65x-fx-Jv8" secondAttribute="bottom" constant="22" id="vJv-vr-1Fa"/>
+                            <constraint firstItem="l21-aj-n3g" firstAttribute="top" secondItem="JNC-Up-htA" secondAttribute="bottom" constant="22" id="wbW-rk-3Pl"/>
+                            <constraint firstItem="0gk-NM-o5Y" firstAttribute="leading" secondItem="w40-Wy-vGI" secondAttribute="leading" id="xRg-Ul-uR7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ngB-fC-kLe"/>
                     </view>
                     <navigationItem key="navigationItem" id="JXu-BK-e1N"/>
@@ -714,66 +748,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-SL-nHH">
-                                <rect key="frame" x="16" y="68" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-SL-nHH">
+                                <rect key="frame" x="16" y="53" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSg-zB-RNc">
-                                <rect key="frame" x="16" y="128" width="343" height="21"/>
+                                <rect key="frame" x="16" y="119" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-MB-DoH">
-                                <rect key="frame" x="20" y="158" width="336" height="30"/>
+                                <rect key="frame" x="20" y="149" width="336" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43c-RJ-8kp">
-                                <rect key="frame" x="20" y="183" width="337" height="1"/>
+                                <rect key="frame" x="20" y="174" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzd-pE-IuH">
-                                <rect key="frame" x="16" y="211" width="343" height="21"/>
+                                <rect key="frame" x="16" y="202" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAW-Y4-lw2">
-                                <rect key="frame" x="19" y="241" width="337" height="30"/>
+                                <rect key="frame" x="19" y="232" width="337" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgF-df-wZe">
-                                <rect key="frame" x="16" y="294" width="343" height="21"/>
+                                <rect key="frame" x="16" y="285" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjH-5F-jgF">
-                                <rect key="frame" x="19" y="324" width="337" height="30"/>
+                                <rect key="frame" x="19" y="315" width="337" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-Sw-P7O">
-                                <rect key="frame" x="19" y="349" width="337" height="1"/>
+                                <rect key="frame" x="19" y="340" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6h-N9-Vqb">
-                                <rect key="frame" x="19" y="266" width="337" height="1"/>
+                                <rect key="frame" x="19" y="257" width="337" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -791,10 +825,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gSf-E7-nxy" firstAttribute="trailing" secondItem="6cA-SL-nHH" secondAttribute="trailing" constant="16" id="BUM-Pu-pBY"/>
-                            <constraint firstItem="6cA-SL-nHH" firstAttribute="leading" secondItem="gSf-E7-nxy" secondAttribute="leading" constant="16" id="EqY-C8-Uoa"/>
+                            <constraint firstItem="gSf-E7-nxy" firstAttribute="trailing" secondItem="6cA-SL-nHH" secondAttribute="trailing" constant="16" id="9NZ-zS-j6a"/>
+                            <constraint firstItem="6cA-SL-nHH" firstAttribute="top" secondItem="gSf-E7-nxy" secondAttribute="top" constant="33" id="DnJ-pV-XNT"/>
                             <constraint firstItem="H8I-ef-jtl" firstAttribute="top" secondItem="gSf-E7-nxy" secondAttribute="top" constant="16" id="Qha-da-uWk"/>
-                            <constraint firstItem="6cA-SL-nHH" firstAttribute="top" secondItem="gSf-E7-nxy" secondAttribute="top" constant="66" id="ad8-6U-OEb"/>
+                            <constraint firstItem="6cA-SL-nHH" firstAttribute="leading" secondItem="gSf-E7-nxy" secondAttribute="leading" constant="16" id="Uwi-fN-2lB"/>
                             <constraint firstItem="H8I-ef-jtl" firstAttribute="leading" secondItem="gSf-E7-nxy" secondAttribute="leading" constant="16" id="mGf-VK-GxB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gSf-E7-nxy"/>
@@ -821,7 +855,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoZ-Py-aZB">
                                 <rect key="frame" x="16" y="162" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -829,8 +863,8 @@
                                 <rect key="frame" x="16" y="194" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="email"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAJ-N0-zit">
                                 <rect key="frame" x="16" y="220" width="337" height="1"/>
@@ -840,7 +874,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-B6-Gbp">
                                 <rect key="frame" x="16" y="260" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -848,7 +882,7 @@
                                 <rect key="frame" x="16" y="292" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqZ-Ud-4JU">
@@ -867,7 +901,7 @@
                                     <segue destination="Oi1-x8-DMR" kind="unwind" unwindAction="unwindLogInSender:" id="itY-UU-UED"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWz-ia-Kuf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWz-ia-Kuf">
                                 <rect key="frame" x="16" y="68" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -877,9 +911,9 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="y30-Cq-qm1" firstAttribute="top" secondItem="e9E-mS-RM2" secondAttribute="top" constant="16" id="K4i-Y3-qsB"/>
-                            <constraint firstItem="e9E-mS-RM2" firstAttribute="trailing" secondItem="FWz-ia-Kuf" secondAttribute="trailing" constant="16" id="ebO-Lp-r5t"/>
-                            <constraint firstItem="FWz-ia-Kuf" firstAttribute="leading" secondItem="e9E-mS-RM2" secondAttribute="leading" constant="16" id="iA0-3Y-SaG"/>
-                            <constraint firstItem="FWz-ia-Kuf" firstAttribute="top" secondItem="e9E-mS-RM2" secondAttribute="top" constant="66" id="im8-ZK-Ipy"/>
+                            <constraint firstItem="FWz-ia-Kuf" firstAttribute="top" secondItem="y30-Cq-qm1" secondAttribute="bottom" constant="8" id="NGR-hb-LFK"/>
+                            <constraint firstItem="e9E-mS-RM2" firstAttribute="trailing" secondItem="FWz-ia-Kuf" secondAttribute="trailing" constant="16" id="OKb-EH-JhY"/>
+                            <constraint firstItem="FWz-ia-Kuf" firstAttribute="leading" secondItem="e9E-mS-RM2" secondAttribute="leading" constant="16" id="RVw-HD-Ny7"/>
                             <constraint firstItem="y30-Cq-qm1" firstAttribute="leading" secondItem="e9E-mS-RM2" secondAttribute="leading" constant="16" id="xmp-JK-dRQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e9E-mS-RM2"/>
@@ -902,44 +936,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJi-Ev-WqZ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="QgR-5p-HTC" id="AZR-Au-vcA"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TEc-LG-KR0">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="158" id="5wX-ap-AeJ" customClass="RecipeSearchResultsTableViewCell" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="158"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="120" id="5wX-ap-AeJ" customClass="RecipeSearchResultsTableViewCell" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wX-ap-AeJ" id="WiS-bT-ZbJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="157.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xH-2x-j4I">
-                                                    <rect key="frame" x="16" y="8" width="343" height="141.5"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="103.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3F-AX-fyX">
-                                                            <rect key="frame" x="144" y="8" width="199" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3F-AX-fyX">
+                                                            <rect key="frame" x="114" y="-3" width="229" height="44"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
+                                                            <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55y-dP-2TA">
-                                                            <rect key="frame" x="8" y="8" width="112" height="112"/>
+                                                            <rect key="frame" x="0.0" y="-3" width="106" height="106"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8a-80-1QJ">
-                                                            <rect key="frame" x="144" y="37" width="199" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8a-80-1QJ">
+                                                            <rect key="frame" x="114" y="49" width="229" height="54"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -967,6 +993,21 @@
                                     <outlet property="delegate" destination="QgR-5p-HTC" id="RMg-SU-Z00"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbb-yB-7FW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="JWQ-YU-Cov"/>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJi-Ev-WqZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QgR-5p-HTC" id="AZR-Au-vcA"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="nJ4-e3-fGP"/>
@@ -1049,7 +1090,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="KzN-1M-vTr" kind="show" id="HnF-Vq-DEn"/>
+                        <segue destination="KzN-1M-vTr" kind="show" identifier="toFullRecipe" id="HnF-Vq-DEn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5Z-lm-Xf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1061,24 +1102,154 @@
             <objects>
                 <viewController id="KzN-1M-vTr" customClass="RecipeDetailsViewController" customModule="The_Plant_Eater_Cookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eee-pH-Cdf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVi-Su-C1F">
-                                <rect key="frame" x="16" y="102" width="343" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWM-2m-cfI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="787"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-KN-JgW">
+                                        <rect key="frame" x="20" y="0.0" width="359" height="869"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="241-27-Q0v">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="335"/>
+                                                <string key="image">AMAZING-GRILLABLE-Veggie-Burgers-Hearty-flavorful-and-hold-up-on-the-grill-or-skillet-vegan-veggieburger-grilling-dinner-healthy-recipe</string>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-JS-gWX">
+                                                <rect key="frame" x="0.0" y="337" width="181" height="14"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs6-Jj-abw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y9-pN-q6j">
+                                                        <rect key="frame" x="130.5" y="0.0" width="50.5" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-m0-ghQ">
+                                                <rect key="frame" x="0.0" y="353" width="198.5" height="14"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd5-2Q-Wc9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaF-BD-icD">
+                                                        <rect key="frame" x="131" y="0.0" width="67.5" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Z4b-eJ-em2">
+                                                <rect key="frame" x="0.0" y="369" width="206" height="14"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prep Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHm-sb-gJj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prep Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-m7-eE1">
+                                                        <rect key="frame" x="130" y="0.0" width="76" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-cS-pdv">
+                                                <rect key="frame" x="0.0" y="385" width="206" height="14"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="422-T1-QGY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF8-kr-7Cq">
+                                                        <rect key="frame" x="130" y="0.0" width="76" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="VIr-LZ-RG4">
+                                                <rect key="frame" x="0.0" y="401" width="359" height="236"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="236" id="aub-f3-1Kh"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="dSI-0m-Q0K">
+                                                <rect key="frame" x="0.0" y="639" width="359" height="230"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="230" id="2jg-xd-hyC"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="VIr-LZ-RG4" secondAttribute="trailing" id="CzS-d0-iPG"/>
+                                            <constraint firstItem="VIr-LZ-RG4" firstAttribute="trailing" secondItem="dSI-0m-Q0K" secondAttribute="trailing" id="SeB-Fk-LMr"/>
+                                            <constraint firstAttribute="height" constant="869" id="ZF5-i3-T51"/>
+                                            <constraint firstItem="VIr-LZ-RG4" firstAttribute="centerX" secondItem="F6m-KN-JgW" secondAttribute="centerX" id="fyA-rS-sAh"/>
+                                            <constraint firstItem="VIr-LZ-RG4" firstAttribute="leading" secondItem="F6m-KN-JgW" secondAttribute="leading" id="ozE-wd-t6e"/>
+                                            <constraint firstAttribute="bottom" secondItem="dSI-0m-Q0K" secondAttribute="bottom" id="ulV-a6-5Y7"/>
+                                            <constraint firstAttribute="trailing" secondItem="VIr-LZ-RG4" secondAttribute="trailing" id="wMe-TW-ur7"/>
+                                            <constraint firstAttribute="width" constant="359" id="xVk-jN-Hm0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="F6m-KN-JgW" firstAttribute="leading" secondItem="oWM-2m-cfI" secondAttribute="leading" constant="20" id="Gvr-Ij-HTQ"/>
+                                    <constraint firstItem="F6m-KN-JgW" firstAttribute="top" secondItem="oWM-2m-cfI" secondAttribute="top" id="YRU-3O-B69"/>
+                                    <constraint firstAttribute="trailing" secondItem="F6m-KN-JgW" secondAttribute="trailing" constant="20" id="YVF-4A-bKH"/>
+                                    <constraint firstAttribute="bottom" secondItem="F6m-KN-JgW" secondAttribute="bottom" id="o7q-Ig-joa"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oWM-2m-cfI" firstAttribute="bottom" secondItem="3vf-aN-vlL" secondAttribute="bottom" id="ZYe-EU-6zG"/>
+                            <constraint firstItem="oWM-2m-cfI" firstAttribute="leading" secondItem="3vf-aN-vlL" secondAttribute="leading" id="dT0-kh-3jb"/>
+                            <constraint firstItem="oWM-2m-cfI" firstAttribute="top" secondItem="3vf-aN-vlL" secondAttribute="top" id="rWE-06-16m"/>
+                            <constraint firstItem="oWM-2m-cfI" firstAttribute="trailing" secondItem="3vf-aN-vlL" secondAttribute="trailing" id="zad-Cs-iIy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3vf-aN-vlL"/>
                     </view>
                     <navigationItem key="navigationItem" id="aVh-n0-3YE">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OiB-uI-zZl"/>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="cookTimeLabel" destination="gF8-kr-7Cq" id="D8x-5v-Ntx"/>
+                        <outlet property="descriptionTextView" destination="VIr-LZ-RG4" id="O7s-OP-ZAU"/>
+                        <outlet property="imageRecipeImageView" destination="241-27-Q0v" id="5F4-Kz-ikf"/>
+                        <outlet property="ingredientsTextView" destination="dSI-0m-Q0K" id="4lk-4O-vBr"/>
+                        <outlet property="nbServingLabel" destination="QaF-BD-icD" id="JPN-Hz-Zc2"/>
+                        <outlet property="prepTimeLabel" destination="gFt-m7-eE1" id="1tp-Hz-jLf"/>
+                        <outlet property="sourceLabel" destination="1Y9-pN-q6j" id="D8m-Oo-gTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Di2-cL-Q4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="-223"/>
+            <point key="canvasLocation" x="2464.8000000000002" y="-223.98800599700152"/>
         </scene>
         <!--Home-->
         <scene sceneID="dnw-dK-y62">
@@ -1169,16 +1340,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2tu-L9-X3x">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="574" id="nFm-61-xNl"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
                                     <outlet property="delegate" destination="R0N-DE-LjF" id="440-aU-meS"/>
                                 </connections>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMT-I7-D3A">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 </textAttributes>
@@ -1189,12 +1357,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2tu-L9-X3x" secondAttribute="trailing" id="CNw-p6-tdu"/>
-                            <constraint firstItem="2tu-L9-X3x" firstAttribute="trailing" secondItem="vMT-I7-D3A" secondAttribute="trailing" id="HoO-N4-jVX"/>
-                            <constraint firstItem="2tu-L9-X3x" firstAttribute="top" secondItem="vMT-I7-D3A" secondAttribute="bottom" id="JiY-LP-4S7"/>
-                            <constraint firstItem="2tu-L9-X3x" firstAttribute="bottom" secondItem="Z1g-Nd-Bb5" secondAttribute="bottom" id="mcR-qX-CRz"/>
-                            <constraint firstItem="2tu-L9-X3x" firstAttribute="leading" secondItem="WeU-c3-aOV" secondAttribute="leading" id="v4B-E1-J7Q"/>
-                            <constraint firstItem="2tu-L9-X3x" firstAttribute="leading" secondItem="vMT-I7-D3A" secondAttribute="leading" id="vaq-pP-IIX"/>
+                            <constraint firstItem="vMT-I7-D3A" firstAttribute="top" secondItem="Z1g-Nd-Bb5" secondAttribute="top" id="008-A3-00h"/>
+                            <constraint firstItem="vMT-I7-D3A" firstAttribute="leading" secondItem="WeU-c3-aOV" secondAttribute="leading" id="3aY-GA-6cg"/>
+                            <constraint firstAttribute="trailing" secondItem="vMT-I7-D3A" secondAttribute="trailing" id="VVB-ye-FPM"/>
+                            <constraint firstItem="2tu-L9-X3x" firstAttribute="bottom" secondItem="Z1g-Nd-Bb5" secondAttribute="bottom" id="kgd-23-X3j"/>
+                            <constraint firstItem="vMT-I7-D3A" firstAttribute="bottom" secondItem="2tu-L9-X3x" secondAttribute="top" id="tdD-2p-iB6"/>
+                            <constraint firstItem="vMT-I7-D3A" firstAttribute="leading" secondItem="2tu-L9-X3x" secondAttribute="leading" id="v4o-3O-jew"/>
+                            <constraint firstItem="vMT-I7-D3A" firstAttribute="trailing" secondItem="2tu-L9-X3x" secondAttribute="trailing" id="zAm-0r-ad3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z1g-Nd-Bb5"/>
                     </view>
@@ -1217,14 +1386,19 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mo7-Wd-nSv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="Iip-dL-Ptc">
+                                    <navigationItem title="Quick Add" id="Iip-dL-Ptc">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="MTr-77-YDb">
+                                            <color key="tintColor" red="0.68545748179999999" green="0.83914974620000005" blue="0.79938414999999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
                                                 <segue destination="41X-Z5-ONj" kind="unwind" identifier="cancelQuickAdd" unwindAction="uniwindFromQuickAddWithSegue:" id="Wex-qB-nzD"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uxs-23-FMc">
+                                            <color key="tintColor" red="0.68545748179999999" green="0.83914974620000005" blue="0.79938414999999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
                                                 <action selector="onPlusTapped" destination="CSR-jd-6p4" id="YZf-wX-afX"/>
                                             </connections>
@@ -1243,13 +1417,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Woa-JX-WyE" firstAttribute="leading" secondItem="EIY-sK-WUt" secondAttribute="leading" id="0A4-aT-IF2"/>
-                            <constraint firstItem="Woa-JX-WyE" firstAttribute="top" secondItem="mo7-Wd-nSv" secondAttribute="bottom" id="8YX-OX-Oz4"/>
-                            <constraint firstItem="Woa-JX-WyE" firstAttribute="bottom" secondItem="EIY-sK-WUt" secondAttribute="bottom" id="KCA-Jz-zGW"/>
-                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="top" secondItem="EIY-sK-WUt" secondAttribute="top" id="dsb-0T-olh"/>
-                            <constraint firstItem="Woa-JX-WyE" firstAttribute="trailing" secondItem="EIY-sK-WUt" secondAttribute="trailing" id="tuf-BK-YVY"/>
-                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="trailing" secondItem="Woa-JX-WyE" secondAttribute="trailing" id="vAN-jL-kcH"/>
-                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="leading" secondItem="Woa-JX-WyE" secondAttribute="leading" id="w7e-3u-pvS"/>
+                            <constraint firstItem="Woa-JX-WyE" firstAttribute="bottom" secondItem="EIY-sK-WUt" secondAttribute="bottom" id="ByN-QN-I0f"/>
+                            <constraint firstItem="Woa-JX-WyE" firstAttribute="leading" secondItem="Kq6-ge-7Ld" secondAttribute="leading" id="HAJ-fb-gIw"/>
+                            <constraint firstAttribute="trailing" secondItem="Woa-JX-WyE" secondAttribute="trailing" id="IWk-dK-zPA"/>
+                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="leading" secondItem="Woa-JX-WyE" secondAttribute="leading" id="ScD-4z-OfQ"/>
+                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="bottom" secondItem="Woa-JX-WyE" secondAttribute="top" id="ZkL-fO-MU6"/>
+                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="trailing" secondItem="Woa-JX-WyE" secondAttribute="trailing" id="f7A-DW-PEd"/>
+                            <constraint firstItem="mo7-Wd-nSv" firstAttribute="top" secondItem="EIY-sK-WUt" secondAttribute="top" id="lRY-AD-2P3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EIY-sK-WUt"/>
                     </view>
@@ -1265,11 +1439,16 @@
         </scene>
     </scenes>
     <resources>
+        <image width="1456" height="2045">
+            <string key="name">AMAZING-GRILLABLE-Veggie-Burgers-Hearty-flavorful-and-hold-up-on-the-grill-or-skillet-vegan-veggieburger-grilling-dinner-healthy-recipe</string>
+        </image>
         <image name="Diplodocus" width="1755.75" height="2177.25"/>
         <image name="WTF" width="25.600000381469727" height="25.600000381469727"/>
         <image name="back" width="204.80000305175781" height="204.80000305175781"/>
         <image name="icons8-dinosaur-32" width="24" height="24"/>
         <image name="icons8-hamburger-30" width="22.5" height="22.5"/>
+        <image name="ramen-2" width="409.60000610351562" height="409.60000610351562"/>
         <image name="recipe-book-2" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="thinking-3" width="409.60000610351562" height="409.60000610351562"/>
     </resources>
 </document>

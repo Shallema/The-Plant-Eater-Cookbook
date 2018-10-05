@@ -15,6 +15,7 @@ class InstructionsAddViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var instructionsTextView: UITextView!
     
+    
     //MARK: - Instance Properties
     
     struct InstructionsContent {
@@ -23,9 +24,8 @@ class InstructionsAddViewController: UIViewController, UITextViewDelegate {
     
     var instructionContent: InstructionsContent? {
         self.loadViewIfNeeded()
-        let instructions = instructionsTextView.text ?? ""
-        
-        return InstructionsContent(instruction: instructions)
+        let instruction = instructionsTextView.text ?? ""
+        return InstructionsContent(instruction: instruction)
     }
     
     //MARK: - ViewController Life Cycle

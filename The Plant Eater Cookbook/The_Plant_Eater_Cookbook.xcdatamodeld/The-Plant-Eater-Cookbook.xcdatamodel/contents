@@ -34,6 +34,9 @@
     </entity>
     <entity name="SavedRecipes" representedClassName="SavedRecipes" syncable="YES">
         <attribute name="cookTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fulldescr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="ingredients" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nbServe" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="prepTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -42,9 +45,9 @@
         <attribute name="subcatId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="QuickAdd" positionX="81.5078125" positionY="-8.6875" width="128" height="90"/>
-        <element name="SavedRecipes" positionX="-207.32421875" positionY="-251.30078125" width="128" height="148"/>
         <element name="FoodCategory" positionX="-464.87890625" positionY="-29.296875" width="128" height="163"/>
         <element name="FoodSubcategory" positionX="2.46875" positionY="119.96875" width="128" height="268"/>
+        <element name="QuickAdd" positionX="81.5078125" positionY="-8.6875" width="128" height="90"/>
+        <element name="SavedRecipes" positionX="-207.32421875" positionY="-251.30078125" width="128" height="195"/>
     </elements>
 </model>

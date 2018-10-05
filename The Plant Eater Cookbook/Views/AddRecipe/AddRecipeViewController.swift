@@ -114,30 +114,36 @@ class AddRecipeViewController: UIViewController, UIPageViewControllerDataSource,
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
-        let savedRecipes = SavedRecipes(context: PersistenceService.context)
+        let newRecipe = SavedRecipes(context: PersistenceService.context)
         
         for vc in orderedViewControllers{
             switch vc {
             case let vc as OverviewAddTableViewController:
-                savedRecipes.name = vc.overviewContent?.title
-                savedRecipes.shortDescr = vc.overviewContent?.descr
-                savedRecipes.source = vc.overviewContent?.source
-                savedRecipes.nbServe = Int64(vc.overviewContent?.serve ?? 0)
-                savedRecipes.subcatId = Int64(vc.overviewContent?.category?.id ?? 0)
-                savedRecipes.prepTime = Double(vc.overviewContent?.prepTime ?? 0 )
-                savedRecipes.cookTime = Double(vc.overviewContent?.cookTime ?? 0)
-                PersistenceService.saveContext()
-                self.savedRecipes.append(savedRecipes)
+                newRecipe.name = vc.overviewContent?.title
+                newRecipe.shortDescr = vc.overviewContent?.descr
+                newRecipe.source = vc.overviewContent?.source
+                newRecipe.nbServe = Int64(vc.overviewContent?.serve ?? 0)
+                newRecipe.subcatId = Int64(vc.overviewContent?.category?.id ?? 0)
+                newRecipe.prepTime = Double(vc.overviewContent?.prepTime ?? 0 )
+                newRecipe.cookTime = Double(vc.overviewContent?.cookTime ?? 0)
+                
             case let vc as IngredientsAddViewController:
-                print(vc.ingredientContent!)
+                newRecipe.ingredients = vc.ingredientContent?.ingredient
+                
             case let vc as InstructionsAddViewController:
-                print(vc.instructionContent!)
+                newRecipe.fulldescr = vc.instructionContent?.instruction ?? "NO DESCRIPTION"
+  
             case let vc as ImageAddViewController:
-                print(vc.imageContent!)
+                if let data = UIImageJPEGRepresentation(vc.imageContent?.image ?? UIImage(), 0.8) {
+                    newRecipe.image = data as NSData
+                }
+      
             default:
                 break
             }
         }
+        
+        PersistenceService.saveContext()
         
         self.dismiss(animated: true)
     }

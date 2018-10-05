@@ -152,7 +152,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         Auth.auth().createUser(withEmail: email, password: pass) { user, error in
             if error == nil && user != nil {
-                print("User created!")
+                
+                let alert = UIAlertController(title: "Oops", message: "User created!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+//                print("User created!")
                 
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = username
@@ -162,12 +166,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         print("User display name changed!")
                         self.dismiss(animated: false, completion: nil)
                     } else {
-                        print("Error: \(error!.localizedDescription)")
+                        let alert = UIAlertController(title: "Oops", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+//                        print("Error: \(error!.localizedDescription)")
                     }
                 }
                 
             } else {
-                print("Error: \(error!.localizedDescription)")
+                let alert = UIAlertController(title: "Oops", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+//                print("Error: \(error!.localizedDescription)")
             }
         }
         

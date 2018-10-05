@@ -2,7 +2,7 @@
 //  SavedRecipes+CoreDataProperties.swift
 //  The Plant Eater Cookbook
 //
-//  Created by James Hallemans on 04/10/2018.
+//  Created by James Hallemans on 05/10/2018.
 //  Copyright © 2018 SandrineH. All rights reserved.
 //
 //
@@ -24,5 +24,8 @@ extension SavedRecipes {
     @NSManaged public var shortDescr: String?
     @NSManaged public var source: String?
     @NSManaged public var subcatId: Int64
+    @NSManaged public var ingredients: String?
+    @NSManaged public var fulldescr: String?
+    @NSManaged public var image: NSData?
 
 }

@@ -11,10 +11,14 @@ import CoreData
 
 class ResultRecipesTableViewController: UITableViewController {
     
+    //MARK: - Class Properites
+    
+    static let recipeDetailsSegue = "toFullRecipe"
+    
     //MARK: - Instance Properties
     
     var savedRecipes = [SavedRecipes]()
-
+    
     
     //MARK: - Life Cycle
 
@@ -27,6 +31,8 @@ class ResultRecipesTableViewController: UITableViewController {
             let savedRecipe = try PersistenceService.context.fetch(fetchRequest)
             self.savedRecipes = savedRecipe
         } catch {}
+        
+        //tableView.setEditing(true, animated: true)
     }
 
 
@@ -48,6 +54,7 @@ class ResultRecipesTableViewController: UITableViewController {
         
         let listRecipes = savedRecipes[indexPath.row]
         cell.update(with: listRecipes)
+        cell.showsReorderControl = true
         
         return cell
     }
@@ -59,6 +66,11 @@ class ResultRecipesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectRecipe = self.savedRecipes[indexPath.row]
+        self.performSegue(withIdentifier: ResultRecipesTableViewController.recipeDetailsSegue, sender: selectRecipe)
+    }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -66,31 +78,23 @@ class ResultRecipesTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = self.savedRecipes[fromIndexPath.row]
+        savedRecipes.remove(at: fromIndexPath.row)
+        savedRecipes.insert(movedObject, at: destinationIndexPath.row)
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
+    //MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let detailRecipeVC = segue.destination as? RecipeDetailsViewController {
+            detailRecipeVC.recipeSaved = sender as? SavedRecipes
+        }
     }
-    */
-
 }

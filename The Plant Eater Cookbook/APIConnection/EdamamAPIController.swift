@@ -22,7 +22,7 @@ class EdamamAPIController {
 //
 //        let searchURL2 = EdamamAPIController.baseURL.withQueries(params)!
 //
-        let strUrl = "https://api.edamam.com/search?app_id=480e6bf7&health=vegan&from=0&app_key=58c6e7a6db9850b6210b1af9c77cbc79&to=9&q=\(query.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)"
+        let strUrl = "https://api.edamam.com/search?app_id=480e6bf7&health=vegan&from=0&app_key=58c6e7a6db9850b6210b1af9c77cbc79&to=12&q=\(query.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)"
         
         
         let searchURL = URL(string: strUrl)!

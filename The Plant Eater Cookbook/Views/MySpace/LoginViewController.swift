@@ -12,7 +12,7 @@ import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    //MARK:- IBOutlets Properties
+    //MARK: - IBOutlets Properties
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -150,8 +150,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if error == nil && user != nil {
                 self.dismiss(animated: false, completion: nil)
             } else {
-                let alert = UIAlertController(title: "Alert", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                let alert = UIAlertController(title: "Oops", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
 //                print("Error logging in: \(error!.localizedDescription)")
             }

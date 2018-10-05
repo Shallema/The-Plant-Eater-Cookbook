@@ -28,6 +28,7 @@ class IngredientsAddViewController: UIViewController, UITextViewDelegate {
         return IngredientContent(ingredient: ingredient)
     }
     
+    
     //MARK: - ViewController Life Cycle
 
     override func viewDidLoad() {
